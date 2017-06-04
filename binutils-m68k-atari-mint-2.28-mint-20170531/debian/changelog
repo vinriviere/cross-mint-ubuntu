@@ -1,0 +1,84 @@
+binutils-m68k-atari-mint (2.28-mint-20170531-1) unstable; urgency=medium
+
+  * Upgrade to version 2.28.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 02 Jun 2017 11:01:46 +0200
+
+binutils-m68k-atari-mint (2.26-mint-20160320-1) unstable; urgency=medium
+
+  * Upgrade to version 2.26.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 20 Mar 2016 09:08:43 +0100
+
+binutils-m68k-atari-mint (2.24-mint-20141017-2) unstable; urgency=medium
+
+  * Fixed build with gcc 4.9.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 01 Nov 2014 17:19:33 +0100
+
+binutils-m68k-atari-mint (2.24-mint-20141017-1) unstable; urgency=medium
+
+  * Fixed addr2line bug 17481. Reported by Markus Fröschle.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 18 Oct 2014 11:35:41 +0200
+
+binutils-m68k-atari-mint (2.24-mint-20131217-1) unstable; urgency=low
+
+  * Upgraded to version 2.24.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 01 Apr 2014 21:17:59 +0200
+
+binutils-m68k-atari-mint (2.23.2-mint-20130327-2) unstable; urgency=low
+
+  * Fixed compilation bug with Texinfo-5.2.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 19 Oct 2013 00:06:47 +0200
+
+binutils-m68k-atari-mint (2.23.2-mint-20130327-1) unstable; urgency=low
+
+  * Upgraded to version 2.23.2.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 17 Apr 2013 20:50:42 +0200
+
+binutils-m68k-atari-mint (2.23.1-mint-20121116-1) unstable; urgency=low
+
+  * Upgraded to version 2.23.1.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 16 Nov 2012 23:31:01 +0100
+
+binutils-m68k-atari-mint (2.22-mint-20120205-1) unstable; urgency=low
+
+  * Upgraded to version 2.22. Included the fix for the bug 13145 regression on
+    ColdFire.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 07 Feb 2012 22:48:52 +0100
+
+binutils-m68k-atari-mint (2.21.1-mint-20110627-1) unstable; urgency=low
+
+  * Upgraded to version 2.21.1
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 26 Jul 2011 20:05:25 +0200
+
+binutils-m68k-atari-mint (2.21-mint-20110206-1) unstable; urgency=low
+
+  * Fixed gprof bug 12468 (Missing functions and call counts).
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 08 Feb 2011 20:56:27 +0100
+
+binutils-m68k-atari-mint (2.21-mint-20101209-1) unstable; urgency=low
+
+  * Upgraded to version 2.21
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 10 Dec 2010 20:53:47 +0100
+
+binutils-m68k-atari-mint (2.20.1-mint-20100410-1) unstable; urgency=low
+
+  * Upgraded to version 2.20.1
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 11 Apr 2010 09:48:47 +0200
+
+binutils-m68k-atari-mint (2.20-mint-20091024-1) unstable; urgency=low
+
+  * Initial version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 31 Oct 2009 20:24:36 +0100

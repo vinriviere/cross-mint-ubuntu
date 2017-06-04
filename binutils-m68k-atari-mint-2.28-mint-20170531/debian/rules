@@ -1,0 +1,130 @@
+#!/usr/bin/make -f
+# Sample debian/rules that uses debhelper.
+# GNU copyright 1997 to 1999 by Joey Hess.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+# These are used for cross-compiling and for saving the configure script
+# from having to guess our platform (since we know it already)
+DEB_BUILD_GNU_TYPE      := $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+DEB_HOST_GNU_TYPE       := $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+
+tarball := $(wildcard binutils-*.tar.bz2)
+patch   := $(wildcard binutils-*.patch.bz2)
+
+srcdir  := $(shell echo $(tarball) | sed -e 's/\.tar\.bz2//')
+
+# FIXME: one-char vars are evil, even more than emacs.
+D := $(CURDIR)/debian/binutils-m68k-atari-mint
+
+unpack: unpack-stamp
+unpack-stamp:
+	dh_testdir
+
+	tar jxf $(tarball)
+	mkdir build
+
+	touch unpack-stamp
+
+patch: patch-stamp
+patch-stamp: unpack-stamp
+	dh_testdir
+
+	cd $(srcdir) && \
+		bzcat ../$(patch) | patch -p1
+
+	touch patch-stamp
+
+configure: configure-stamp
+configure-stamp: patch-stamp
+	dh_testdir
+
+	cd build && \
+	../$(srcdir)/configure --prefix=/usr \
+			--infodir=/usr/share/info \
+			--mandir=/usr/share/man \
+			--build=$(DEB_BUILD_GNU_TYPE) \
+			--host=$(DEB_HOST_GNU_TYPE) \
+			--target=m68k-atari-mint \
+			--disable-nls
+
+	touch configure-stamp
+
+build: configure-stamp build-stamp
+build-stamp:
+	dh_testdir
+	cd build && \
+		$(MAKE)
+	touch build-stamp
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs
+
+	# Add here commands to install the package into debian/binutils-m68k-atari-mint
+	cd build && \
+		$(MAKE) install DESTDIR=$(D)
+
+	# Change hardlinks to symlinks
+	for i in ar as ld nm objcopy objdump ranlib strip ; do \
+		rm debian/binutils-m68k-atari-mint/usr/m68k-atari-mint/bin/$$i ; \
+		ln -s ../../bin/m68k-atari-mint-$$i $(D)/usr/m68k-atari-mint/bin/$$i ; \
+	done
+
+	# Files also in main binutils pkg
+	rm -r $(D)/usr/share/info
+	rm $(D)/usr/bin/m68k-atari-mint-readelf
+	rm $(D)/usr/bin/m68k-atari-mint-elfedit
+	rm $(D)/usr/m68k-atari-mint/bin/readelf
+	rm $(D)/usr/share/man/man1/m68k-atari-mint-dlltool.1
+	rm $(D)/usr/share/man/man1/m68k-atari-mint-nlmconv.1
+	rm $(D)/usr/share/man/man1/m68k-atari-mint-readelf.1
+	rm $(D)/usr/share/man/man1/m68k-atari-mint-elfedit.1
+	rm $(D)/usr/share/man/man1/m68k-atari-mint-windmc.1
+	rm $(D)/usr/share/man/man1/m68k-atari-mint-windres.1
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -rf build $(srcdir)
+	rm -f build-stamp configure-stamp patch-stamp unpack-stamp
+
+	dh_clean
+
+# Build architecture-independent files here.
+binary-indep: build install
+# We have nothing to do by default.
+
+# Build architecture-dependent files here.
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installdocs
+#	dh_installexamples
+#	dh_installmenu
+#	dh_installlogrotate
+#	dh_installemacsen
+#	dh_installpam
+#	dh_installmime
+#	dh_installinit
+#	dh_installcron
+	dh_installman
+#	dh_installinfo
+	dh_installchangelogs
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+#	dh_makeshlibs
+	dh_installdeb
+#	dh_perl
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure

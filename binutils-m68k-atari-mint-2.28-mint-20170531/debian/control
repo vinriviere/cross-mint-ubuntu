@@ -1,0 +1,18 @@
+Source: binutils-m68k-atari-mint
+Section: devel
+Priority: extra
+Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
+Standards-Version: 3.7.3
+Build-Depends: debhelper (>= 5.0.0), autoconf (>= 2.13), bison, flex, gettext, texinfo, bzip2
+XS-DM-Upload-Allowed: yes
+
+Package: binutils-m68k-atari-mint
+Section: devel
+Architecture: any
+Priority: extra
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: binary utilities that support Atari MiNT executables.
+ The programs in this package are used to assemble, link and manipulate binary
+ and object files for the Atari MiNT operatig system. This package is
+ primarily for Atari MiNT developers and cross-compilers and is not needed by
+ normal users or developers.

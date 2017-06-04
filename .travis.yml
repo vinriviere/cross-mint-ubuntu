@@ -1,0 +1,26 @@
+# Build script for Travis CI
+# This will automatically be run on every push to GitHub
+# Build History: https://travis-ci.org/vinriviere/cross-mint-ubuntu/builds
+
+language: c
+os: linux
+dist: trusty
+sudo: required
+
+before_install:
+  # Install our GnuPG key pair
+  - .travis/install_gpg_keys.sh
+  - unset GPG_KEYS
+  # Install additional packages
+  - sudo apt-get install -y devscripts debhelper
+  # Display packages versions
+  - git --version
+  - dpkg --version
+
+script:
+  # Fail on first error
+  - set -e
+  # Set DEBEMAIL variable for signing packages
+  - . .travis/guess_debemail.sh
+  # Deploy to https://launchpad.net/~vriviere/+archive/ubuntu/ppa
+  - .travis/deploy_ppa_all_dists.sh binutils-m68k-atari-mint ppa:vriviere/ppa

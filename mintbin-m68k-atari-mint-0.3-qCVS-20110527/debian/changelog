@@ -1,0 +1,12 @@
+mintbin-m68k-atari-mint (0.3-qCVS-20110527-1) unstable; urgency=low
+
+  * Upgraded to version CVS-20110527. This fixes the stack tool on 64-bit systems.
+    Thanks to Marc-Anton Kehr for reporting this bug.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 27 May 2011 22:32:22 +0200
+
+mintbin-m68k-atari-mint (0.3-patch-20091031-1) unstable; urgency=low
+
+  * Initial version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 31 Oct 2009 23:45:50 +0100

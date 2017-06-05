@@ -18,7 +18,7 @@ cd $PACKAGE
 
 # Update the changelog with new version
 OLD_VERSION=$(dpkg-parsechangelog | sed -n 's/^Version: *//p')
-NEW_VERSION=${OLD_VERSION}ppa2~$DIST
+NEW_VERSION=${OLD_VERSION}ppa$(date -u +%Y%m%d%H%M%S)~$DIST
 dch --force-distribution -D $DIST -v $NEW_VERSION "Create PPA source package for $DIST".
 
 echo "\$ dpkg-parsechangelog"

@@ -1,0 +1,137 @@
+gcc-m68k-atari-mint (4.6.4-mint-20170417-1) unstable; urgency=medium
+
+  * Fix compilation with texinfo 6.3
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Mon, 17 Apr 2017 18:15:50 +0200
+
+gcc-m68k-atari-mint (4.6.4-mint-20130415-3) unstable; urgency=medium
+
+  * Remove automake build dependency for Ubuntu 15.04.
+  * Fix compilation with GCC 5.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 30 Oct 2015 11:07:35 +0100
+
+gcc-m68k-atari-mint (4.6.4-mint-20130415-2) unstable; urgency=low
+
+  * Rebuilt with mintlib-CVS-20131103.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 06 Nov 2013 22:21:39 +0100
+
+gcc-m68k-atari-mint (4.6.4-mint-20130415-1) unstable; urgency=low
+
+  * Upgraded to version 4.6.4.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 17 Apr 2013 21:07:09 +0200
+
+gcc-m68k-atari-mint (4.6.3-mint-20120503-1) unstable; urgency=low
+
+  * Upgraded to version 4.6.3.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Thu, 03 May 2012 23:26:02 +0200
+
+gcc-m68k-atari-mint (4.6.2-mint-20111028-2) unstable; urgency=low
+
+  * Rebuilt with binutils-2.22-mint-20120205.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 07 Feb 2012 22:59:37 +0100
+
+gcc-m68k-atari-mint (4.6.2-mint-20111028-1) unstable; urgency=low
+
+  * Upgraded to version 4.6.2.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 29 Oct 2011 14:53:18 +0200
+
+gcc-m68k-atari-mint (4.6.1-mint-20110727-1) unstable; urgency=low
+
+  * Upgraded to version 4.6.1. I have included the patch for the GCC bug #47612 to
+    allow the compilation of the MiNTLib for ColdFire.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Mon, 29 Aug 2011 12:53:49 +0200
+
+gcc-m68k-atari-mint (4.5.3-mint-20110429-2) unstable; urgency=low
+
+  * Rebuilt with binutils-2.21.1-mint-20110627.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 26 Jul 2011 20:17:23 +0200
+
+gcc-m68k-atari-mint (4.5.3-mint-20110429-1) unstable; urgency=low
+
+  * Upgraded to version 4.5.3.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 30 Apr 2011 11:10:08 +0200
+
+gcc-m68k-atari-mint (4.5.2-mint-20110206-1) unstable; urgency=low
+
+  * Never automatically link with the debug or profile standard libraries.
+    To do so, compile them yourself then add -lc_g or -lc_p on the command line.
+    As a consequence, linking with -g is now safe in any case.
+  * Stripped all the libraries. The size is much smaller.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 08 Feb 2011 21:03:57 +0100
+
+gcc-m68k-atari-mint (4.5.2-mint-20110128-1) unstable; urgency=low
+
+  * On the -m68020-60 configuration, floats are now returned into d0/d1 instead
+    of fp0. The ABI is now compatible between all the configurations, and the
+    libraries can be mixed.
+  * Added the nonstandard define __M68881__ whenever __HAVE_68881__ is defined.
+    This means a 680x0 FPU (not ColdFire) is available and should be used.
+    This new define is for the compatibility with older sources.
+    New sources should only test __HAVE_68881__.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 30 Jan 2011 16:46:15 +0100
+
+gcc-m68k-atari-mint (4.5.2-mint-20110110-1) unstable; urgency=low
+
+  * Removed the defines __off_t, __off64_t and __ssize_t from the C++ headers. They conflict with <unistd.h>.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 26 Jan 2011 22:59:52 +0100
+
+gcc-m68k-atari-mint (4.5.2-mint-20110102-1) unstable; urgency=low
+
+  * Upgraded to version 4.5.2.
+    This fixes the GCC bug 45052 about the volatile attribute on struct members.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 02 Jan 2011 15:02:52 +0100
+
+gcc-m68k-atari-mint (4.5.1-mint-20100802-2) unstable; urgency=low
+
+  * Rebuilt with binutils-2.21-mint-20101209.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 10 Dec 2010 21:58:34 +0100
+
+gcc-m68k-atari-mint (4.5.1-mint-20100802-1) unstable; urgency=low
+
+  * Upgraded to version 4.5.1.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Mon, 02 Aug 2010 19:24:06 +0200
+
+gcc-m68k-atari-mint (4.5.0-mint-20100511-1) unstable; urgency=low
+
+  * Enabled -fstack-protector-all and libmudflap.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 15 May 2010 21:45:37 +0200
+
+gcc-m68k-atari-mint (4.5.0-mint-20100416-1) unstable; urgency=low
+
+  * Upgraded to version 4.5.0.
+
+  * Cleaned up Debian dependencies.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 02 May 2010 21:29:54 +0200
+
+gcc-m68k-atari-mint (4.4.3-mint-20100123-1) unstable; urgency=low
+
+  * Added support for 6 multilib variants: m68000, m68020-60, m5475 and their mshort versions.
+
+  * Removed all the mshort libraries except libgcc.
+
+  * Fixed the wrong <limits.h> which caused PATH_MAX to be undefined.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Mon, 25 Jan 2010 23:52:44 +0100
+
+gcc-m68k-atari-mint (4.4.2-mint-20091017-1) unstable; urgency=low
+
+  * Initial version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 31 Oct 2009 23:57:10 +0100

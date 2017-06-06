@@ -1,0 +1,166 @@
+mintlib-m68k-atari-mint (0.60.1.Git-20170304-1) unstable; urgency=medium
+
+  * Upgrade to the latest CVS version
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 05 May 2017 22:05:51 +0200
+
+mintlib-m68k-atari-mint (0.60.1.CVS-20160320-2) unstable; urgency=medium
+
+  * Add missing build dependency to libfl-dev
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Mon, 17 Apr 2017 19:02:32 +0200
+
+mintlib-m68k-atari-mint (0.60.1.CVS-20160320-1) unstable; urgency=medium
+
+  * Upgrade to the latest CVS version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 20 Mar 2016 09:19:22 +0100
+
+mintlib-m68k-atari-mint (0.60.1.CVS-20141104-1) unstable; urgency=medium
+
+  * Upgraded to latest CVS version. This fixes the getlogin() user name truncation bug.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 05 Nov 2014 20:55:46 +0100
+
+mintlib-m68k-atari-mint (0.60.1.CVS-20141006-1) unstable; urgency=medium
+
+  * Upgraded to latest CVS version. This fixes the arrow keys in nano on the BIOS console.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Mon, 06 Oct 2014 21:06:21 +0200
+
+mintlib-m68k-atari-mint (0.60.1.CVS-20140906-1) unstable; urgency=medium
+
+  * Upgraded to current CVS version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 06 Sep 2014 16:05:58 +0200
+
+mintlib-m68k-atari-mint (0.60.1.CVS-20140312-1) unstable; urgency=low
+
+  * Upgraded to current CVS version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 14 Mar 2014 21:34:04 +0100
+
+mintlib-m68k-atari-mint (0.60.0.CVS-20131103-1) unstable; urgency=low
+
+  * Upgraded to current CVS version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 06 Nov 2013 22:14:58 +0100
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20130415-1) unstable; urgency=low
+
+  * Upgraded to current CVS version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 17 Apr 2013 21:12:22 +0200
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20130107-1) unstable; urgency=low
+
+  * Upgraded to current CVS version. This fixes the "make" malloc() bug.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Mon, 07 Jan 2013 20:46:19 +0100
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20120503-1) unstable; urgency=low
+
+  * Upgraded to current CVS version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 04 May 2012 20:17:40 +0200
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20111028-2) unstable; urgency=low
+
+  * Rebuilt with binutils-2.22-mint-20120205.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 07 Feb 2012 23:19:55 +0100
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20111028-1) unstable; urgency=low
+
+  * Upgraded to current CVS version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 29 Oct 2011 15:15:37 +0200
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20110725-2) unstable; urgency=low
+
+  * Rebuilt with gcc-4.6.1-mint-20110727.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Mon, 29 Aug 2011 13:34:24 +0200
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20110725-1) unstable; urgency=low
+
+  * Upgraded to current CVS version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 26 Jul 2011 20:50:22 +0200
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20110429-1) unstable; urgency=low
+
+  * Upgraded to current CVS version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 30 Apr 2011 11:32:46 +0200
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20110223-1) unstable; urgency=low
+
+  * Upgraded to current CVS version. The file <mint/osbind.h> now contains a safe
+    binding named SuperToUser() to safely return to user mode.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Thu, 24 Feb 2011 22:52:32 +0100
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20110128-2) unstable; urgency=low
+
+  * Removed math-68881.h since it is provided by GCC.
+  * Stripped all the libraries. The size is much smaller.
+  * Removed the -16 or -020 symbolic links. Application makefiles should be
+    cleaned up.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 08 Feb 2011 21:36:46 +0100
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20110128-1) unstable; urgency=low
+
+  * Upgraded to current CVS version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 30 Jan 2011 17:12:24 +0100
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20110102-1) unstable; urgency=low
+
+  * Upgraded to current CVS version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 02 Jan 2011 15:29:06 +0100
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20101209-1) unstable; urgency=low
+
+  * Upgraded to current CVS version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 10 Dec 2010 22:19:36 +0100
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20100708-2) unstable; urgency=low
+
+  * Rebuilt with gcc-4.5.1-mint-20100802.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Mon, 02 Aug 2010 20:25:35 +0200
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20100708-1) unstable; urgency=low
+
+  * Upgraded to current CVS version. The Line A has been fixed for ColdFire.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Thu, 08 Jul 2010 22:57:00 +0200
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20100512-1) unstable; urgency=low
+
+  * Upgraded to current CVS version. It allows the usage of the STACKSIZE
+    environment variable to override a process stack size at runtime.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 15 May 2010 22:07:14 +0200
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20100415-1) unstable; urgency=low
+
+  * Upgraded to current CVS version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 02 May 2010 22:15:59 +0200
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20100123-1) unstable; urgency=low
+
+  * Upgraded to current CVS version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 30 Jan 2010 19:52:43 +0100
+
+mintlib-m68k-atari-mint (0.58.0.CVS-20091018-1) unstable; urgency=low
+
+  * Initial version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 01 Nov 2009 10:02:28 +0100

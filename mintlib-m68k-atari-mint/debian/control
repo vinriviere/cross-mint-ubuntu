@@ -1,0 +1,16 @@
+Source: mintlib-m68k-atari-mint
+Section: devel
+Priority: extra
+Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
+Standards-Version: 3.7.3
+Build-Depends: make, bash, gcc-m68k-atari-mint, binutils-m68k-atari-mint, gcc, libfl-dev
+XS-DM-Upload-Allowed: yes
+
+Package: mintlib-m68k-atari-mint
+Provides: libc-m68k-atari-mint
+Section: devel
+Architecture: any
+Priority: extra
+Description: MiNTLib, the Atari MiNT standard library.
+ This package is primarily for Atari MiNT developers and is
+ not needed by normal users or developers.

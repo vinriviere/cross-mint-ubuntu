@@ -34,7 +34,7 @@ ls -l
 
 # Upload the source package
 echo "\$ dput -f $PPA ${PACKAGE}_${NEW_VERSION}_source.changes"
-dput -f $PPA ${PACKAGE}_${NEW_VERSION}_source.changes
+dput -f $PPA ${PACKAGE}_${NEW_VERSION}_source.changes | cat
 
 # Delete uploaded packages
 echo "\$ rm ${PACKAGE}_$NEW_VERSION*"

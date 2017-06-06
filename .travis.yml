@@ -18,6 +18,8 @@ before_install:
   - dpkg --version
 
 script:
+  # Set FIXED_TRAVIS_COMMIT_RANGE
+  - . .travis/fix_travis_commit_range.sh
   # Fail on first error
   - set -e
   # Set DEBEMAIL variable for signing packages

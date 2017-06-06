@@ -1,3 +1,9 @@
+gcc-m68k-atari-mint (4.6.4-mint-20170417-2) unstable; urgency=medium
+
+  * Add Build-Depends to mintlib-m68k-atari-mint, pml-m68k-atari-mint.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 06 Jun 2017 23:58:51 +0200
+
 gcc-m68k-atari-mint (4.6.4-mint-20170417-1) unstable; urgency=medium
 
   * Fix compilation with texinfo 6.3

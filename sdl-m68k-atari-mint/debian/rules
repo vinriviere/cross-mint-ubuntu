@@ -1,0 +1,203 @@
+#!/usr/bin/make -f
+# Sample debian/rules that uses debhelper.
+# GNU copyright 1997 to 1999 by Joey Hess.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+# These are used for cross-compiling and for saving the configure script
+# from having to guess our platform (since we know it already)
+DEB_BUILD_GNU_TYPE      := $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+DEB_HOST_GNU_TYPE       := $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+
+tarball := $(wildcard sdl-*.tar.bz2)
+patch   := $(wildcard sdl-*.patch.bz2)
+
+srcdir  := $(shell echo $(tarball) | sed -e 's/\.tar\.bz2//')
+
+# FIXME: one-char vars are evil, even more than emacs.
+D := $(CURDIR)/debian/sdl-m68k-atari-mint
+DOCDIR := $(D)/usr/share/doc/sdl-m68k-atari-mint
+
+COMMON_CFLAGS := -O2 -fomit-frame-pointer
+
+COMMON_CONFIGFLAGS := \
+	--build=$(DEB_BUILD_GNU_TYPE) \
+	--host=m68k-atari-mint \
+	--prefix=/usr/m68k-atari-mint \
+	--mandir=/usr/m68k-atari-mint/share/man \
+	--disable-video-opengl \
+	--disable-threads
+
+unpack: unpack-stamp
+unpack-stamp:
+	dh_testdir
+
+	tar jxf $(tarball)
+
+	touch unpack-stamp
+
+patch: patch-stamp
+patch-stamp: unpack-stamp
+	dh_testdir
+
+ifneq (, $(patch))
+	cd $(srcdir) && \
+		bzcat ../$(patch) | patch -p1
+endif
+
+	touch patch-stamp
+
+configure-m68000: configure-m68000-stamp
+configure-m68000-stamp: patch-stamp
+	dh_testdir
+
+	mkdir build-m68000
+	cd build-m68000 && \
+		../$(srcdir)/configure \
+			$(COMMON_CONFIGFLAGS) \
+			CFLAGS="$(COMMON_CFLAGS)" \
+			LDFLAGS=""
+	cd build-m68000 && sed -i 's:-L[^ ]*  ::g' sdl-config
+	cd build-m68000 && sed -i 's:-L\$${libdir}  ::g' sdl.pc
+
+	touch configure-m68000-stamp
+
+configure-m68020-60: configure-m68020-60-stamp
+configure-m68020-60-stamp: patch-stamp
+	dh_testdir
+
+	mkdir build-m68020-60
+	cd build-m68020-60 && \
+		../$(srcdir)/configure \
+			$(COMMON_CONFIGFLAGS) \
+			--libdir=/usr/m68k-atari-mint/lib/m68020-60 \
+			CFLAGS="-m68020-60 $(COMMON_CFLAGS)" \
+			LDFLAGS=""
+	cd build-m68020-60 && sed -i 's:-L[^ ]*  ::g' sdl-config
+	cd build-m68020-60 && sed -i 's:-L\$${libdir}  ::g' sdl.pc
+
+	touch configure-m68020-60-stamp
+
+configure-m5475: configure-m5475-stamp
+configure-m5475-stamp: patch-stamp
+	dh_testdir
+
+	mkdir build-m5475
+	cd build-m5475 && \
+		../$(srcdir)/configure \
+			$(COMMON_CONFIGFLAGS) \
+			--libdir=/usr/m68k-atari-mint/lib/m5475 \
+			CFLAGS="-mcpu=5475 $(COMMON_CFLAGS)" \
+			LDFLAGS=""
+	cd build-m5475 && sed -i 's:-L[^ ]*  ::g' sdl-config
+	cd build-m5475 && sed -i 's:-L\$${libdir}  ::g' sdl.pc
+
+	touch configure-m5475-stamp
+
+build-m68000: configure-m68000-stamp build-m68000-stamp
+build-m68000-stamp:
+	dh_testdir
+	cd build-m68000 && \
+		$(MAKE)
+	touch build-m68000-stamp
+
+build-m68020-60: configure-m68020-60-stamp build-m68020-60-stamp
+build-m68020-60-stamp:
+	dh_testdir
+	cd build-m68020-60 && \
+		$(MAKE)
+	touch build-m68020-60-stamp
+
+build-m5475: configure-m5475-stamp build-m5475-stamp
+build-m5475-stamp:
+	dh_testdir
+	cd build-m5475 && \
+		$(MAKE)
+	touch build-m5475-stamp
+
+install-m68000: build-m68000 install-m68000-stamp
+install-m68000-stamp:
+	dh_testdir
+	dh_testroot
+	dh_installdirs
+
+	cd build-m68000 && \
+		$(MAKE) install DESTDIR=$(D)
+
+	mkdir -p $(D)/usr/share/doc/sdl-m68k-atari-mint
+	cp $(srcdir)/README $(DOCDIR)
+	cp $(srcdir)/README.MiNT $(DOCDIR)
+	cp $(srcdir)/README-SDL.txt $(DOCDIR)
+
+	touch install-m68000-stamp
+
+install-m68020-60: install-m68000 build-m68020-60 install-m68020-60-stamp
+install-m68020-60-stamp:
+	dh_testdir
+	dh_testroot
+	dh_installdirs
+
+	cd build-m68020-60 && \
+		$(MAKE) install-lib install-data DESTDIR=$(D)
+
+	touch install-m68020-60-stamp
+
+install-m5475: install-m68000 build-m5475 install-m5475-stamp
+install-m5475-stamp:
+	dh_testdir
+	dh_testroot
+	dh_installdirs
+
+	cd build-m5475 && \
+		$(MAKE) install-lib install-data DESTDIR=$(D)
+
+	touch install-m5475-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -rf build-* $(srcdir)
+	rm -f build-*-stamp configure-*-stamp install-*-stamp patch-stamp unpack-stamp
+
+	dh_clean
+
+build: build-m68000 build-m68020-60 build-m5475
+install: install-m68000 install-m68020-60 install-m5475
+	# Cleanup
+	find  $(D)/usr/m68k-atari-mint/lib -name '*.a' -print -exec m68k-atari-mint-strip -S -x '{}' ';'
+
+# Build architecture-independent files here.
+binary-indep: build install
+# We have nothing to do by default.
+
+# Build architecture-dependent files here.
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installdocs
+#	dh_installexamples
+#	dh_installmenu
+#	dh_installlogrotate
+#	dh_installemacsen
+#	dh_installpam
+#	dh_installmime
+#	dh_installinit
+#	dh_installcron
+	dh_installman
+#	dh_installinfo
+	dh_installchangelogs
+	dh_link
+#	dh_strip
+	dh_compress -XREADME `cd $(D) && find usr/m68k-atari-mint/share/man -type f`
+	dh_fixperms
+#	dh_makeshlibs
+	dh_installdeb
+#	dh_perl
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure

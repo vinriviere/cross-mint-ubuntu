@@ -1,0 +1,39 @@
+sdl-m68k-atari-mint (1.2-HG-20140906-1) unstable; urgency=medium
+
+  * Upgraded to current HG version. This fixes the keyboard in full screen
+    on ColdFire.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 06 Sep 2014 16:25:15 +0200
+
+sdl-m68k-atari-mint (1.2-HG-20131104-1) unstable; urgency=low
+
+  * Upgraded to current HG version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 06 Nov 2013 23:12:52 +0100
+
+sdl-m68k-atari-mint (1.2-HG-20130415-1) unstable; urgency=low
+
+  * Upgraded to current HG version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 17 Apr 2013 22:09:16 +0200
+
+sdl-m68k-atari-mint (1.2-HG-20121114-1) unstable; urgency=low
+
+  * Upgraded to current HG version. This fixes the abnormal slowness in GEM
+    window.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 14 Nov 2012 21:46:13 +0100
+
+sdl-m68k-atari-mint (1.2-HG-20121012-1) unstable; urgency=low
+
+  * Upgraded to current HG version. This includes Patrice Mandin's fix
+    for mouse moves in GEM window.
+  * Included README files.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 13 Oct 2012 11:18:07 +0200
+
+sdl-m68k-atari-mint (1.2-HG-20121006-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 06 Oct 2012 14:06:41 +0200

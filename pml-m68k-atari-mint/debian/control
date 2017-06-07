@@ -5,6 +5,7 @@ Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
 Standards-Version: 3.7.3
 Build-Depends: debhelper (>= 5.0.0), make,
  gcc-m68k-atari-mint, libc-m68k-atari-mint
+Homepage: ftp://ftp.funet.fi/pub/atari/programming/
 
 Package: pml-m68k-atari-mint
 Provides: libm-m68k-atari-mint

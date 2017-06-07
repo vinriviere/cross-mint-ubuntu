@@ -6,6 +6,7 @@ Standards-Version: 3.7.3
 Build-Depends: debhelper (>= 5.0.0), bzip2,
  gcc-m68k-atari-mint,
  gemlib-m68k-atari-mint, ldg-m68k-atari-mint
+Homepage: https://www.libsdl.org/
 
 Package: sdl-m68k-atari-mint
 Section: devel

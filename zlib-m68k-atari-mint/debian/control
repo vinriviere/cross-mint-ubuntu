@@ -1,6 +1,6 @@
 Source: zlib-m68k-atari-mint
 Section: devel
-Priority: extra
+Priority: optional
 Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
 Standards-Version: 3.7.3
 Build-Depends: debhelper, make, gcc-m68k-atari-mint
@@ -8,7 +8,7 @@ Build-Depends: debhelper, make, gcc-m68k-atari-mint
 Package: zlib-m68k-atari-mint
 Section: devel
 Architecture: any
-Priority: extra
+Priority: optional
 Description: A compression library implementing the Deflate algorithm, used by gzip and PKZIP, for Atari MiNT.
  This package is primarily for Atari MiNT developers and is
  not needed by normal users or developers.

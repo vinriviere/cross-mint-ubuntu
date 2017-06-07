@@ -1,6 +1,6 @@
 Source: cflib-m68k-atari-mint
 Section: devel
-Priority: extra
+Priority: optional
 Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
 Standards-Version: 3.7.3
 Build-Depends: debhelper, make, gcc-m68k-atari-mint, binutils-m68k-atari-mint, mintlib-m68k-atari-mint, gemlib-m68k-atari-mint (>= 0.4.2)
@@ -8,7 +8,7 @@ Build-Depends: debhelper, make, gcc-m68k-atari-mint, binutils-m68k-atari-mint, m
 Package: cflib-m68k-atari-mint
 Section: devel
 Architecture: any
-Priority: extra
+Priority: optional
 Description: Christian Felsch's GEM utility library for Atari MiNT.
  This package is primarily for Atari MiNT developers and is
  not needed by normal users or developers.

@@ -1,6 +1,6 @@
 Source: ldg-m68k-atari-mint
 Section: devel
-Priority: extra
+Priority: optional
 Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
 Standards-Version: 3.7.3
 Build-Depends: debhelper, make, gcc-m68k-atari-mint, binutils-m68k-atari-mint, mintlib-m68k-atari-mint, gemlib-m68k-atari-mint
@@ -8,7 +8,7 @@ Build-Depends: debhelper, make, gcc-m68k-atari-mint, binutils-m68k-atari-mint, m
 Package: ldg-m68k-atari-mint
 Section: devel
 Architecture: any
-Priority: extra
+Priority: optional
 Depends: gemlib-m68k-atari-mint
 Description: LDG, the Gem Dynamical Libraries for Atari MiNT.
  This package is primarily for Atari MiNT developers and is

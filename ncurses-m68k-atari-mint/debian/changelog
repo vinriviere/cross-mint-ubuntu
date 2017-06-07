@@ -1,0 +1,77 @@
+ncurses-m68k-atari-mint (5.9-4) unstable; urgency=low
+
+  * Rebuilt with mintlib-CVS-20131103.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 06 Nov 2013 23:16:24 +0100
+
+ncurses-m68k-atari-mint (5.9-3) unstable; urgency=low
+
+  * Rebuilt with gcc-4.6.4-mint-20130415.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 17 Apr 2013 22:04:20 +0200
+
+ncurses-m68k-atari-mint (5.9-2) unstable; urgency=low
+
+  * Overrided CPPFLAGS and LDFLAGS.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 04 May 2012 21:43:15 +0200
+
+ncurses-m68k-atari-mint (5.9-1) unstable; urgency=low
+
+  * Upgraded to version 5.9.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 07 Feb 2012 23:37:45 +0100
+
+ncurses-m68k-atari-mint (5.7-mint-20090821-9) unstable; urgency=low
+
+  * Rebuilt with gcc-4.6.2-mint-20111028.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 29 Oct 2011 15:26:04 +0200
+
+ncurses-m68k-atari-mint (5.7-mint-20090821-8) unstable; urgency=low
+
+  * Rebuilt with gcc-4.6.1-mint-20110727.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Mon, 29 Aug 2011 14:23:08 +0200
+
+ncurses-m68k-atari-mint (5.7-mint-20090821-7) unstable; urgency=low
+
+  * Rebuilt with binutils-2.21.1-mint-20110627.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 26 Jul 2011 21:02:53 +0200
+
+ncurses-m68k-atari-mint (5.7-mint-20090821-6) unstable; urgency=low
+
+  * Stripped all the libraries. The size is much smaller.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 08 Feb 2011 22:12:22 +0100
+
+ncurses-m68k-atari-mint (5.7-mint-20090821-5) unstable; urgency=low
+
+  * Rebuilt with gcc-4.5.2-mint-20110128.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 30 Jan 2011 17:53:06 +0100
+
+ncurses-m68k-atari-mint (5.7-mint-20090821-4) unstable; urgency=low
+
+  * Rebuilt with gcc-4.5.2-mint-20110102.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 02 Jan 2011 15:38:53 +0100
+
+ncurses-m68k-atari-mint (5.7-mint-20090821-3) unstable; urgency=low
+
+  * Rebuilt with binutils-2.21-mint-20101209.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 10 Dec 2010 22:37:11 +0100
+
+ncurses-m68k-atari-mint (5.7-mint-20090821-2) unstable; urgency=low
+
+  * Rebuilt with gcc-4.5.1-mint-20100802.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Mon, 02 Aug 2010 20:34:16 +0200
+
+ncurses-m68k-atari-mint (5.7-mint-20090821-1) unstable; urgency=low
+
+  * Initial version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 10 Jul 2010 13:31:55 +0200

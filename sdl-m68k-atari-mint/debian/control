@@ -3,13 +3,13 @@ Section: devel
 Priority: extra
 Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
 Standards-Version: 3.7.3
-Build-Depends: make, gcc-m68k-atari-mint, binutils-m68k-atari-mint, mintlib-m68k-atari-mint, gemlib-m68k-atari-mint, ldg-m68k-atari-mint
+Build-Depends: debhelper, gcc-m68k-atari-mint, gemlib-m68k-atari-mint, ldg-m68k-atari-mint
 XS-DM-Upload-Allowed: yes
 
 Package: sdl-m68k-atari-mint
 Section: devel
 Architecture: any
-Depends: mintlib-m68k-atari-mint, libm-m68k-atari-mint, gemlib-m68k-atari-mint, ldg-m68k-atari-mint
+Depends: gemlib-m68k-atari-mint, ldg-m68k-atari-mint
 Priority: extra
 Description: SDL, Simple DirectMedia Layer library for Atari MiNT.
  This package is primarily for Atari MiNT developers and is

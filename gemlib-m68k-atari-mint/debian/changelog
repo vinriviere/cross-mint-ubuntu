@@ -1,3 +1,9 @@
+gemlib-m68k-atari-mint (0.43.6-qCVS-20130415-3) unstable; urgency=low
+
+  * Add missing Build-Depends to debhelper.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 07 Jun 2017 09:54:53 +0200
+
 gemlib-m68k-atari-mint (0.43.6-qCVS-20130415-2) unstable; urgency=low
 
   * Rebuilt with mintlib-CVS-20131103.

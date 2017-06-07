@@ -3,7 +3,7 @@ Section: devel
 Priority: extra
 Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
 Standards-Version: 3.7.3
-Build-Depends: make, gcc-m68k-atari-mint, binutils-m68k-atari-mint
+Build-Depends: debhelper, make, gcc-m68k-atari-mint, binutils-m68k-atari-mint
 XS-DM-Upload-Allowed: yes
 
 Package: gemlib-m68k-atari-mint

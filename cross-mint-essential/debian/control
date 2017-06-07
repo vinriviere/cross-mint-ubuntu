@@ -1,21 +1,20 @@
 Source: cross-mint-essential
 Section: devel
-Priority: extra
+Priority: optional
 Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
 Standards-Version: 3.7.3
-Build-Depends: debhelper
-XS-DM-Upload-Allowed: yes
+Build-Depends: debhelper (>= 5.0.0)
 
 Package: cross-mint-essential
 Section: devel
 Architecture: any
-Priority: extra
+Priority: optional
 Depends: binutils-m68k-atari-mint,
-         mintbin-m68k-atari-mint,
-         gcc-m68k-atari-mint,
-         mintlib-m68k-atari-mint,
-         pml-m68k-atari-mint,
-         gemlib-m68k-atari-mint
+ mintbin-m68k-atari-mint,
+ gcc-m68k-atari-mint,
+ mintlib-m68k-atari-mint,
+ pml-m68k-atari-mint,
+ gemlib-m68k-atari-mint
 Description: Atari MiNT cross-compiler tools.
  This package depends on all the essential tools
  to cross-build Atari MiNT software.

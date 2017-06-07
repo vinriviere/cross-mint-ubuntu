@@ -11,7 +11,7 @@ fi
 PACKAGES_SUFFIX=$1
 PPA=$2
 
-MODIFIED_PACKAGES=$(git log $FIXED_TRAVIS_COMMIT_RANGE --name-status | sed -n "s|^[AM]\t\(.*$PACKAGES_SUFFIX\)/.*|\1|p" | sort | uniq)
+MODIFIED_PACKAGES=$(git log $FIXED_TRAVIS_COMMIT_RANGE --name-status | sed -n "s,^[AM]\t\(\(.*-m68k-atari-mint\|cross-mint-essential\)\)/.*,\1,p" | sort | uniq)
 echo "MODIFIED_PACKAGES=$MODIFIED_PACKAGES"
 
 for PACKAGE in $MODIFIED_PACKAGES

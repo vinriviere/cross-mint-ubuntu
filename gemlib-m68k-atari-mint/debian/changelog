@@ -1,3 +1,9 @@
+gemlib-m68k-atari-mint (0.43.6-qCVS-20130415-4) unstable; urgency=low
+
+  * Clean up debian/control.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Thu, 08 Jun 2017 00:41:14 +0200
+
 gemlib-m68k-atari-mint (0.43.6-qCVS-20130415-3) unstable; urgency=low
 
   * Add missing Build-Depends to debhelper.

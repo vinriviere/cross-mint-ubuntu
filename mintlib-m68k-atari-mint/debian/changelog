@@ -1,3 +1,9 @@
+mintlib-m68k-atari-mint (0.60.1.Git-20170304-6) unstable; urgency=medium
+
+  * Clean up debian/control.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Thu, 08 Jun 2017 00:41:14 +0200
+
 mintlib-m68k-atari-mint (0.60.1.Git-20170304-5) unstable; urgency=medium
 
   * Disable -Wimplicit-function-declaration.

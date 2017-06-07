@@ -1,3 +1,9 @@
+openssl-m68k-atari-mint (1.0.1e-2) unstable; urgency=low
+
+  * Clean up debian/control.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Thu, 08 Jun 2017 00:41:14 +0200
+
 openssl-m68k-atari-mint (1.0.1e-1) unstable; urgency=low
 
   * Initial version.

@@ -1,3 +1,9 @@
+ncurses-m68k-atari-mint (5.9-5) unstable; urgency=low
+
+  * Clean up debian/control.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Thu, 08 Jun 2017 00:41:14 +0200
+
 ncurses-m68k-atari-mint (5.9-4) unstable; urgency=low
 
   * Rebuilt with mintlib-CVS-20131103.

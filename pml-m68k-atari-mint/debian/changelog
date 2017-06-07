@@ -1,3 +1,9 @@
+pml-m68k-atari-mint (2.03-mint-20110207-9) unstable; urgency=low
+
+  * Clean up debian/control.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Thu, 08 Jun 2017 00:41:14 +0200
+
 pml-m68k-atari-mint (2.03-mint-20110207-8) unstable; urgency=low
 
   * Add missing Build-Depends to debhelper.

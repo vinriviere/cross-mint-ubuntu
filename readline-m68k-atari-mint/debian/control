@@ -8,7 +8,6 @@ Build-Depends: debhelper (>= 5.0.0),
   gcc-m68k-atari-mint,
   ncurses-m68k-atari-mint
 Homepage: http://www.gnu.org/software/readline/
-XS-DM-Upload-Allowed: yes
 
 Package: readline-m68k-atari-mint
 Section: devel

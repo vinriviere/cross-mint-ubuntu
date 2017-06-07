@@ -4,7 +4,6 @@ Priority: extra
 Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
 Standards-Version: 3.7.3
 Build-Depends: debhelper, make, gcc-m68k-atari-mint
-XS-DM-Upload-Allowed: yes
 
 Package: zlib-m68k-atari-mint
 Section: devel

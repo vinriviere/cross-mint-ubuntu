@@ -1,0 +1,127 @@
+#!/usr/bin/make -f
+# Sample debian/rules that uses debhelper.
+# GNU copyright 1997 to 1999 by Joey Hess.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+# These are used for cross-compiling and for saving the configure script
+# from having to guess our platform (since we know it already)
+DEB_BUILD_GNU_TYPE      := $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+DEB_HOST_GNU_TYPE       := $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+
+tarball := $(wildcard pml-*.tar.bz2)
+patch   := $(wildcard pml-*.patch.bz2)
+
+srcdir  := $(shell echo $(tarball) | sed -e 's/\.tar\..*//')
+
+# FIXME: one-char vars are evil, even more than emacs.
+D := $(CURDIR)/debian/pml-m68k-atari-mint
+
+unpack: unpack-stamp
+unpack-stamp:
+	dh_testdir
+
+	tar jxf $(tarball)
+	mv $(srcdir) build
+
+	touch unpack-stamp
+
+patch: patch-stamp
+patch-stamp: unpack-stamp
+	dh_testdir
+
+	cd build && \
+		bzcat ../$(patch) | patch -p1
+
+	touch patch-stamp
+
+configure: configure-stamp
+configure-stamp: patch-stamp
+	dh_testdir
+
+	cd build/pmlsrc && \
+		sed -i "s:^\(CROSSDIR =\).*:\1 $INSTALL_DIR:g" Makefile Makefile.32 Makefile.16 && \
+		sed -i "s:^\(CC =\).*:\1 m68k-atari-mint-gcc:g" Makefile Makefile.32 Makefile.16 && \
+		sed -i "s:^\(AR =\).*:\1 m68k-atari-mint-ar:g" Makefile Makefile.32 Makefile.16
+
+	touch configure-stamp
+
+build: configure-stamp build-stamp
+build-stamp:
+	dh_testdir
+
+	# 1st pass for compiling m68000 libraries \
+	cd build/pmlsrc && $(MAKE)
+	cd build/pmlsrc && $(MAKE) install CROSSDIR=$(D)/usr/m68k-atari-mint
+
+	# 2nd pass for compiling m68020-60 libraries
+	cd build/pmlsrc && $(MAKE) clean
+	cd build/pmlsrc && sed -i "s:^\(CFLAGS =.*\):\1 -m68020-60:g" Makefile.32 Makefile.16
+	cd build/pmlsrc && sed -i "s:^\(CROSSLIB =.*\):\1/m68020-60:g" Makefile
+	cd build/pmlsrc && $(MAKE)
+	cd build/pmlsrc && $(MAKE) install CROSSDIR=$(D)/usr/m68k-atari-mint
+
+	# 3rd pass for compiling ColdFire V4e libraries
+	cd build/pmlsrc && $(MAKE) clean
+	cd build/pmlsrc && sed -i "s:-m68020-60:-mcpu=5475:g" Makefile.32 Makefile.16
+	cd build/pmlsrc && sed -i "s:m68020-60:m5475:g" Makefile
+	cd build/pmlsrc && $(MAKE)
+	cd build/pmlsrc && $(MAKE) install CROSSDIR=$(D)/usr/m68k-atari-mint
+
+	touch build-stamp
+
+install: build
+	dh_testdir
+	dh_testroot
+	#dh_clean -k
+	dh_installdirs
+
+	# Add here commands to install the package into debian/pml-m68k-atari-mint
+	# The files have already been installed by the build target
+
+	# Cleanup
+	find  $(D)/usr/m68k-atari-mint/lib -name '*.a' -print -exec m68k-atari-mint-strip -S -x '{}' ';'
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -rf build
+	rm -f build-stamp configure-stamp patch-stamp unpack-stamp
+
+	dh_clean
+
+# Build architecture-independent files here.
+binary-indep: build install
+# We have nothing to do by default.
+
+# Build architecture-dependent files here.
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installdocs
+#	dh_installexamples
+#	dh_installmenu
+#	dh_installlogrotate
+#	dh_installemacsen
+#	dh_installpam
+#	dh_installmime
+#	dh_installinit
+#	dh_installcron
+	dh_installman
+#	dh_installinfo
+	dh_installchangelogs
+	dh_link
+	dh_strip -X debian/pml-m68k-atari-mint/usr/m68k-atari-mint
+	dh_compress
+	dh_fixperms
+#	dh_makeshlibs
+	dh_installdeb
+#	dh_perl
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure

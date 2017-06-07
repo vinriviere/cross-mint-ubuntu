@@ -1,0 +1,17 @@
+Source: pml-m68k-atari-mint
+Section: devel
+Priority: extra
+Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
+Standards-Version: 3.7.3
+Build-Depends: make, gcc-m68k-atari-mint, binutils-m68k-atari-mint, mintlib-m68k-atari-mint
+XS-DM-Upload-Allowed: yes
+
+Package: pml-m68k-atari-mint
+Provides: libm-m68k-atari-mint
+Section: devel
+Architecture: any
+Priority: extra
+Depends: pml-m68k-atari-mint
+Description: PML, the Portable Math Library for Atari MiNT.
+ This package is primarily for Atari MiNT developers and is
+ not needed by normal users or developers.

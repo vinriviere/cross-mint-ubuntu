@@ -1,0 +1,81 @@
+pml-m68k-atari-mint (2.03-mint-20110207-7) unstable; urgency=low
+
+  * Rebuilt with mintlib-CVS-20131103.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 06 Nov 2013 22:54:36 +0100
+
+pml-m68k-atari-mint (2.03-mint-20110207-6) unstable; urgency=low
+
+  * Rebuilt with gcc-4.6.4-mint-20130415.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 17 Apr 2013 21:45:44 +0200
+
+pml-m68k-atari-mint (2.03-mint-20110207-5) unstable; urgency=low
+
+  * Rebuilt with binutils-2.22-mint-20120205.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 07 Feb 2012 23:29:40 +0100
+
+pml-m68k-atari-mint (2.03-mint-20110207-4) unstable; urgency=low
+
+  * Rebuilt with gcc-4.6.2-mint-20111028.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 29 Oct 2011 15:21:02 +0200
+
+pml-m68k-atari-mint (2.03-mint-20110207-3) unstable; urgency=low
+
+  * Rebuilt with gcc-4.6.1-mint-20110727.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Mon, 29 Aug 2011 14:03:23 +0200
+
+pml-m68k-atari-mint (2.03-mint-20110207-2) unstable; urgency=low
+
+  * Rebuilt with binutils-2.21.1-mint-20110627.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 26 Jul 2011 20:56:00 +0200
+
+pml-m68k-atari-mint (2.03-mint-20110207-1) unstable; urgency=low
+
+  * The file math-68881.h is not used anymore. Compile with -ffast-math instead.
+  * Stripped all the libraries. The size is much smaller.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 08 Feb 2011 21:52:11 +0100
+
+pml-m68k-atari-mint (2.03-mint-20110129-1) unstable; urgency=low
+
+  * Removed debug messages on errors such as OVERFLOW.
+  * Now the m68020-60 library is really optimized for the FPU.
+  * Now the math functions are automatically inlined by using GCC's internal
+    math-68881.h. Define NO_INLINE_MATH to disable this feature.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 30 Jan 2011 17:20:15 +0100
+
+pml-m68k-atari-mint (2.03-mint-20100123-4) unstable; urgency=low
+
+  * Rebuilt with gcc-4.5.2-mint-20110102.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 02 Jan 2011 15:25:05 +0100
+
+pml-m68k-atari-mint (2.03-mint-20100123-3) unstable; urgency=low
+
+  * Rebuilt with binutils-2.21-mint-20101209.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 10 Dec 2010 22:30:28 +0100
+
+pml-m68k-atari-mint (2.03-mint-20100123-2) unstable; urgency=low
+
+  * Rebuilt with gcc-4.5.1-mint-20100802.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Mon, 02 Aug 2010 20:20:56 +0200
+
+pml-m68k-atari-mint (2.03-mint-20100123-1) unstable; urgency=low
+
+  * Adjusted the Makefile to easily disable building the mshort libraries.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 30 Jan 2010 20:09:05 +0100
+
+pml-m68k-atari-mint (2.03-mint-20090604-1) unstable; urgency=low
+
+  * Initial version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 01 Nov 2009 11:13:01 +0100

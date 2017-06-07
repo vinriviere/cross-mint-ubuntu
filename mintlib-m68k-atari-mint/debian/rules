@@ -34,6 +34,12 @@ patch-stamp: unpack-stamp
 	cd build && \
 		bzcat ../$(patch) | patch -p1
 
+	# Workaround for:
+	# warning: implicit declaration of function [...]  [-Wimplicit-function-declaration]
+	# warning: assignment makes pointer from integer without a cast [enabled by default]
+	# This warning is fatal on Launchpad amd64 builds
+	sed -i 's/^WARN=.*/& -Wno-implicit-function-declaration/' build/configvars
+
 	touch patch-stamp
 
 configure: configure-stamp

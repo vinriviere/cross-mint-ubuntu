@@ -1,3 +1,9 @@
+ldg-m68k-atari-mint (2.32-ldg-SVN-20131104-2) unstable; urgency=low
+
+  * Add missing APT dependencies.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 07 Jun 2017 12:33:30 +0200
+
 ldg-m68k-atari-mint (2.32-ldg-SVN-20131104-1) unstable; urgency=low
 
   * Upgraded to current SVN version.

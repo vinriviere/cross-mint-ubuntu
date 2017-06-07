@@ -3,7 +3,8 @@ Section: devel
 Priority: optional
 Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
 Standards-Version: 3.7.3
-Build-Depends: debhelper (>= 5.0.0), autoconf (>= 2.13), bison, flex, gettext, texinfo, bzip2
+Build-Depends: debhelper (>= 5.0.0), autoconf (>= 2.13),
+  bison, flex, gettext, texinfo, bzip2
 
 Package: binutils-m68k-atari-mint
 Section: devel

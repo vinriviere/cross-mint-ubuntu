@@ -3,14 +3,32 @@ Section: devel
 Priority: optional
 Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
 Standards-Version: 3.7.3
-Build-Depends: dpkg-dev (>= 1.14.15), debhelper (>= 5.0.62), gcc-multilib [amd64 i386 mips mipsel powerpc ppc64 s390 sparc kfreebsd-amd64], libc6.1-dev (>= 2.5) [alpha ia64] | libc0.3-dev (>= 2.5) [hurd-i 386] | libc0.1-dev (>= 2.5) [kfreebsd-i386 kfreebsd-amd64] | libc6-dev (>= 2.5), libc6-dev-amd64 [i386], libc6-dev-sparc64 [sparc], libc6-dev-s390x [s390], libc6-dev-i386 [amd64], libc6-dev-powerpc [ppc64 ], libc6-dev-ppc64 [powerpc], libc0.1-dev-i386 [kfreebsd-amd64], lib32gcc1 [amd64 ppc64 kfreebsd-amd64], lib64gcc1 [i386 powerpc sparc s390], libc6-dev-mips64 [mips mipsel], libc6-dev-mipsn32 [mips mipsel ], m4, libtool, autoconf2.59, libunwind7-dev (>= 0.98.5-6) [ia64], libatomic-ops-dev [ia64], zlib1g-dev, gawk, lzma, xz-utils, patchutils, gperf (>= 3.0.1), bison (>= 1:2.3), flex, gettext, texinfo (>= 4.3), libmpfr-dev (>= 2.4.2), locales [!m68k !knetbsd-i386 !knetbsd-alpha], procps, sharutils, binutils-spu (>= 2.20) [powerpc ppc64], newlib-spu (>= 1.16.0) [powerpc ppc64], libcloog-ppl-dev (>= 0.15), dejagnu [!m68k !hurd-i386 !hurd-alpha], autogen, realpath (>= 1.9.12), chrpath, lsb-release, make (>= 3.81), quilt, binutils-m68k-atari-mint, libmpc-dev (>= 0.8), libcloog-ppl-dev (>= 0.15), mintlib-m68k-atari-mint, pml-m68k-atari-mint
+Build-Depends: dpkg-dev (>= 1.14.15), debhelper (>= 5.0.62),
+ gcc-multilib [amd64 i386 mips mipsel powerpc ppc64 s390 sparc kfreebsd-amd64],
+ libc6.1-dev (>= 2.5) [alpha ia64] | libc0.3-dev (>= 2.5) [hurd-i 386]
+ | libc0.1-dev (>= 2.5) [kfreebsd-i386 kfreebsd-amd64] | libc6-dev (>= 2.5),
+ libc6-dev-amd64 [i386], libc6-dev-sparc64 [sparc], libc6-dev-s390x [s390],
+ libc6-dev-i386 [amd64], libc6-dev-powerpc [ppc64 ], libc6-dev-ppc64 [powerpc],
+ libc0.1-dev-i386 [kfreebsd-amd64], lib32gcc1 [amd64 ppc64 kfreebsd-amd64],
+ lib64gcc1 [i386 powerpc sparc s390], libc6-dev-mips64 [mips mipsel],
+ libc6-dev-mipsn32 [mips mipsel ], m4, libtool, autoconf2.59,
+ libunwind7-dev (>= 0.98.5-6) [ia64], libatomic-ops-dev [ia64], zlib1g-dev,
+ gawk, lzma, xz-utils, patchutils, gperf (>= 3.0.1), bison (>= 1:2.3),
+ flex, gettext, texinfo (>= 4.3), libmpfr-dev (>= 2.4.2),
+ locales [!m68k !knetbsd-i386 !knetbsd-alpha], procps, sharutils,
+ binutils-spu (>= 2.20) [powerpc ppc64], newlib-spu (>= 1.16.0) [powerpc ppc64],
+ libcloog-ppl-dev (>= 0.15), dejagnu [!m68k !hurd-i386 !hurd-alpha], autogen,
+ realpath (>= 1.9.12), chrpath, lsb-release, make (>= 3.81), quilt,
+ binutils-m68k-atari-mint, libmpc-dev (>= 0.8), libcloog-ppl-dev (>= 0.15),
+ mintlib-m68k-atari-mint, pml-m68k-atari-mint
 Homepage: http://gcc.gnu.org/
 
 Package: gcc-m68k-atari-mint
 Section: devel
 Architecture: any
 Priority: optional
-Depends: ${shlibs:Depends}, binutils-m68k-atari-mint, libc-m68k-atari-mint, libm-m68k-atari-mint
+Depends: ${shlibs:Depends}, binutils-m68k-atari-mint,
+ libc-m68k-atari-mint, libm-m68k-atari-mint
 Recommends: mintbin-m68k-atari-mint
 Description: GCC cross-compiler for building Atari MiNT executables.
  This is the GNU Compiler Collection configured to cross-build Atari MiNT

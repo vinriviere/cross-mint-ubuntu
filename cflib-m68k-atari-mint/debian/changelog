@@ -1,0 +1,17 @@
+cflib-m68k-atari-mint (0.21.0-CVS-20130415-2) unstable; urgency=low
+
+  * Rebuilt with mintlib-CVS-20131103.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 06 Nov 2013 23:01:39 +0100
+
+cflib-m68k-atari-mint (0.21.0-CVS-20130415-1) unstable; urgency=low
+
+  * Upgraded to current CVS version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 17 Apr 2013 21:58:53 +0200
+
+cflib-m68k-atari-mint (0.21.0-CVS-20120227-1) unstable; urgency=low
+
+  * Initial version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Thu, 01 Mar 2012 01:23:37 +0100

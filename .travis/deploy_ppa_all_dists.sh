@@ -18,7 +18,10 @@ DISTS+=" xenial"
 DISTS+=" yakkety"
 DISTS+=" zesty"
 
+# Use timestamp as package suffix to generate a unique version number
+SUFFIX=ppa$(date -u +%Y%m%d%H%M%S)
+
 for DIST in $DISTS
 do
-  .travis/deploy_ppa.sh $PACKAGE $DIST $PPA
+  .travis/deploy_ppa.sh $PACKAGE $SUFFIX $DIST $PPA
 done

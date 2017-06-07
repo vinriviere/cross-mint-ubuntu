@@ -2,15 +2,16 @@
 # -e: Exit immediately if a command exits with a non-zero status.
 # -u: Treat unset variables as an error when substituting.
 
-if [ $# != 3 ]
+if [ $# != 4 ]
 then
-  echo "usage: $0 <package> <distribution> <ppa>" >&2
+  echo "usage: $0 <package> <suffix> <distribution> <ppa>" >&2
   exit 1
 fi
 
 PACKAGE=$1
-DIST=$2
-PPA=$3
+SUFFIX=$2
+DIST=$3
+PPA=$4
 
 echo "# Deploying $PACKAGE for $DIST to $PPA"
 
@@ -18,7 +19,7 @@ cd $PACKAGE
 
 # Update the changelog with new version
 OLD_VERSION=$(dpkg-parsechangelog | sed -n 's/^Version: *//p')
-NEW_VERSION=${OLD_VERSION}ppa$(date -u +%Y%m%d%H%M%S)~$DIST
+NEW_VERSION=$OLD_VERSION$SUFFIX~$DIST
 dch --force-distribution -D $DIST -v $NEW_VERSION "Create PPA source package for $DIST".
 
 echo "\$ dpkg-parsechangelog"

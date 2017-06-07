@@ -1,3 +1,9 @@
+gcc-m68k-atari-mint (4.6.4-mint-20170417-3) unstable; urgency=medium
+
+  * Add Depends to libc-m68k-atari-mint, libm-m68k-atari-mint.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 07 Jun 2017 11:02:30 +0200
+
 gcc-m68k-atari-mint (4.6.4-mint-20170417-2) unstable; urgency=medium
 
   * Add Build-Depends to mintlib-m68k-atari-mint, pml-m68k-atari-mint.

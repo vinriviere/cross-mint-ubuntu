@@ -11,7 +11,7 @@ Package: gcc-m68k-atari-mint
 Section: devel
 Architecture: any
 Priority: extra
-Depends: ${shlibs:Depends}, binutils-m68k-atari-mint
+Depends: ${shlibs:Depends}, binutils-m68k-atari-mint, libc-m68k-atari-mint, libm-m68k-atari-mint
 Recommends: mintbin-m68k-atari-mint
 Description: GCC cross-compiler for building Atari MiNT executables.
  This is the GNU Compiler Collection configured to cross-build Atari MiNT

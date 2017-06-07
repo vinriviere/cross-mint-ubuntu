@@ -1,0 +1,5 @@
+openssl-m68k-atari-mint (1.0.1e-1) unstable; urgency=low
+
+  * Initial version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 02 Apr 2014 21:31:15 +0200

@@ -1,0 +1,18 @@
+Source: openssl-m68k-atari-mint
+Section: devel
+Priority: extra
+Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
+Standards-Version: 3.7.3
+Build-Depends: debhelper (>= 5.0.0),
+  gzip, bzip2,
+  gcc-m68k-atari-mint,
+  zlib-m68k-atari-mint, readline-m68k-atari-mint
+Homepage: http://www.openssl.org/
+XS-DM-Upload-Allowed: yes
+
+Package: openssl-m68k-atari-mint
+Section: devel
+Architecture: any
+Priority: extra
+Description: OpenSSL for Atari MiNT.
+ SSL and cryptography library.

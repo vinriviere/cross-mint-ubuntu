@@ -1,0 +1,84 @@
+gemlib-m68k-atari-mint (0.43.6-qCVS-20130415-2) unstable; urgency=low
+
+  * Rebuilt with mintlib-CVS-20131103.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 06 Nov 2013 22:57:30 +0100
+
+gemlib-m68k-atari-mint (0.43.6-qCVS-20130415-1) unstable; urgency=low
+
+  * Upgraded to current CVS version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 17 Apr 2013 21:49:50 +0200
+
+gemlib-m68k-atari-mint (0.43.6-qCVS-20100223-10) unstable; urgency=low
+
+  * Rebuilt with binutils-2.22-mint-20120205.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 07 Feb 2012 23:58:19 +0100
+
+gemlib-m68k-atari-mint (0.43.6-qCVS-20100223-9) unstable; urgency=low
+
+  * Rebuilt with gcc-4.6.2-mint-20111028.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 29 Oct 2011 17:11:09 +0200
+
+gemlib-m68k-atari-mint (0.43.6-qCVS-20100223-8) unstable; urgency=low
+
+  * Rebuilt with gcc-4.6.1-mint-20110727.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Mon, 29 Aug 2011 14:07:55 +0200
+
+gemlib-m68k-atari-mint (0.43.6-qCVS-20100223-7) unstable; urgency=low
+
+  * Rebuilt with binutils-2.21.1-mint-20110627.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 26 Jul 2011 20:58:00 +0200
+
+gemlib-m68k-atari-mint (0.43.6-qCVS-20100223-6) unstable; urgency=low
+
+  * Stripped all the libraries. The size is much smaller.
+  * Removed the -16 symbolic link. Application makefiles should be cleaned up.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 08 Feb 2011 21:59:57 +0100
+
+gemlib-m68k-atari-mint (0.43.6-qCVS-20100223-5) unstable; urgency=low
+
+  * Rebuilt with gcc-4.5.2-mint-20110128.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 30 Jan 2011 17:49:31 +0100
+
+gemlib-m68k-atari-mint (0.43.6-qCVS-20100223-4) unstable; urgency=low
+
+  * Rebuilt with gcc-4.5.2-mint-20110102.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 02 Jan 2011 15:34:51 +0100
+
+gemlib-m68k-atari-mint (0.43.6-qCVS-20100223-3) unstable; urgency=low
+
+  * Rebuilt with binutils-2.21-mint-20101209.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 10 Dec 2010 22:32:23 +0100
+
+gemlib-m68k-atari-mint (0.43.6-qCVS-20100223-2) unstable; urgency=low
+
+  * Rebuilt with gcc-4.5.1-mint-20100802.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Mon, 02 Aug 2010 20:30:46 +0200
+
+gemlib-m68k-atari-mint (0.43.6-qCVS-20100223-1) unstable; urgency=low
+
+  * Upgraded to version CVS-20100223 to fix grect_to_array().
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 23 Feb 2010 23:25:15 +0100
+
+gemlib-m68k-atari-mint (0.43.6-qCVS-20100123-1) unstable; urgency=low
+
+  * Upgraded to CVS version to fix the clobbered registers issue.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 30 Jan 2010 21:46:18 +0100
+
+gemlib-m68k-atari-mint (0.43.6-patch-20091024-1) unstable; urgency=low
+
+  * Initial version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 01 Nov 2009 21:21:55 +0100

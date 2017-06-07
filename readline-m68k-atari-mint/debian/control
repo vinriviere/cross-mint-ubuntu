@@ -1,0 +1,18 @@
+Source: readline-m68k-atari-mint
+Section: devel
+Priority: extra
+Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
+Standards-Version: 3.7.3
+Build-Depends: debhelper (>= 5.0.0),
+  gzip, bzip2, mawk | awk, texinfo,
+  gcc-m68k-atari-mint,
+  ncurses-m68k-atari-mint
+Homepage: http://www.gnu.org/software/readline/
+XS-DM-Upload-Allowed: yes
+
+Package: readline-m68k-atari-mint
+Section: devel
+Architecture: any
+Priority: extra
+Description: readline for Atari MiNT.
+ A library to allow command line history and completion.

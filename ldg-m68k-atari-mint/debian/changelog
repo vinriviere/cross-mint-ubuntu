@@ -1,0 +1,17 @@
+ldg-m68k-atari-mint (2.32-ldg-SVN-20131104-1) unstable; urgency=low
+
+  * Upgraded to current SVN version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 06 Nov 2013 23:10:19 +0100
+
+ldg-m68k-atari-mint (2.32-SVN-20121005-2) unstable; urgency=low
+
+  * Rebuilt with gcc-4.6.4-mint-20130415.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 17 Apr 2013 22:02:52 +0200
+
+ldg-m68k-atari-mint (2.32-SVN-20121005-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 05 Oct 2012 23:25:25 +0200

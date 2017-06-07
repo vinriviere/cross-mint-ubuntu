@@ -1,0 +1,129 @@
+#!/usr/bin/make -f
+# Sample debian/rules that uses debhelper.
+# GNU copyright 1997 to 1999 by Joey Hess.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+# These are used for cross-compiling and for saving the configure script
+# from having to guess our platform (since we know it already)
+DEB_BUILD_GNU_TYPE      := $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+DEB_HOST_GNU_TYPE       := $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+
+tarball := $(wildcard ldg-*.tar.*)
+
+srcdir  := $(shell echo $(tarball) | sed -e 's/\(-src\)\?\.tar\.[^.]*//')
+
+# FIXME: one-char vars are evil, even more than emacs.
+D := $(CURDIR)/debian/ldg-m68k-atari-mint
+
+COMMON_CFLAGS := -W -Wall -O2 -fomit-frame-pointer -I../../include -I.. -I.
+
+unpack: unpack-stamp
+unpack-stamp:
+	dh_testdir
+
+	tar xf $(tarball)
+	mv $(srcdir) build
+
+	touch unpack-stamp
+
+patch: patch-stamp
+patch-stamp: unpack-stamp
+	dh_testdir
+
+#	cd build && \
+#		bzcat ../$(patch) | patch -p1
+
+	touch patch-stamp
+
+configure: configure-stamp
+configure-stamp: patch-stamp
+	dh_testdir
+
+	touch configure-stamp
+
+build: configure-stamp build-stamp
+build-stamp:
+	dh_testdir
+
+	# 1st pass for m68000 libraries
+	cd build/src/devel && make -f gcc.mak CROSS=yes CFLAGS="$(COMMON_CFLAGS)"
+	cd build/src/devel && mkdir -p $(D)/usr/m68k-atari-mint/lib
+	cd build/src/devel && cp ../../lib/gcc/libldg.a $(D)/usr/m68k-atari-mint/lib
+	cd build/src/devel && make -f gcc.mak CROSS=yes clean
+	cd build/src/devel && rm ../../lib/gcc/*.a
+
+	# 2nd pass for m68020-60 libraries
+	cd build/src/devel && make -f gcc.mak CROSS=yes CFLAGS="-m68020-60 $(COMMON_CFLAGS)"
+	cd build/src/devel && mkdir -p $(D)/usr/m68k-atari-mint/lib/m68020-60
+	cd build/src/devel && cp ../../lib/gcc/libldg.a $(D)/usr/m68k-atari-mint/lib/m68020-60
+	cd build/src/devel && make -f gcc.mak CROSS=yes clean
+	cd build/src/devel && rm ../../lib/gcc/*.a
+
+	# 3rd pass for m5475 libraries
+	cd build/src/devel && make -f gcc.mak CROSS=yes CFLAGS="-mcpu=5475 $(COMMON_CFLAGS)"
+	cd build/src/devel && mkdir -p $(D)/usr/m68k-atari-mint/lib/m5475
+	cd build/src/devel && cp ../../lib/gcc/libldg.a $(D)/usr/m68k-atari-mint/lib/m5475
+	cd build/src/devel && make -f gcc.mak CROSS=yes clean
+	cd build/src/devel && rm ../../lib/gcc/*.a
+
+	cd build/src/devel && mkdir -p $(D)/usr/m68k-atari-mint/include
+	cd build/src/devel && cp ../../include/ldg.h $(D)/usr/m68k-atari-mint/include
+
+	touch build-stamp
+
+install: build
+	dh_testdir
+	dh_testroot
+	#dh_clean -k
+	dh_installdirs
+
+	# Add here commands to install the package into debian/ldg-m68k-atari-mint
+	# The files have already been installed by the build target
+
+	# Cleanup
+	find  $(D)/usr/m68k-atari-mint/lib -name '*.a' -print -exec m68k-atari-mint-strip -S -x '{}' ';'
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -rf build
+	rm -f build-stamp configure-stamp patch-stamp unpack-stamp
+
+	dh_clean
+
+# Build architecture-independent files here.
+binary-indep: build install
+# We have nothing to do by default.
+
+# Build architecture-dependent files here.
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installdocs
+#	dh_installexamples
+#	dh_installmenu
+#	dh_installlogrotate
+#	dh_installemacsen
+#	dh_installpam
+#	dh_installmime
+#	dh_installinit
+#	dh_installcron
+	dh_installman
+#	dh_installinfo
+	dh_installchangelogs
+	dh_link
+	dh_strip -X debian/ldg-m68k-atari-mint/usr/m68k-atari-mint
+	dh_compress
+	dh_fixperms
+#	dh_makeshlibs
+	dh_installdeb
+#	dh_perl
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure

@@ -15,7 +15,6 @@ PPA=$2
 DISTS=
 DISTS+=" trusty"
 DISTS+=" xenial"
-DISTS+=" yakkety"
 DISTS+=" zesty"
 DISTS+=" artful"
 

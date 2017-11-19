@@ -1,3 +1,9 @@
+binutils-m68k-atari-mint (2.29.1-mint-20171119-1) unstable; urgency=medium
+
+  * Upgrade to version 2.29.1.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 19 Nov 2017 20:49:58 +0100
+
 binutils-m68k-atari-mint (2.28-mint-20170531-2) unstable; urgency=medium
 
   * Clean up debian/control.

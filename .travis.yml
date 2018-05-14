@@ -15,7 +15,7 @@ before_install:
   - .travis/install_ssh_id.sh
   - unset SSH_ID
   # Install additional packages
-  - sudo apt-get install -y devscripts debhelper
+  - sudo apt-get install -y devscripts debhelper python-paramiko
   # Display packages versions
   - git --version
   - dpkg --version

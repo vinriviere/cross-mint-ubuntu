@@ -29,3 +29,5 @@ script:
   - . .travis/guess_debemail.sh
   # Deploy modified packages to https://launchpad.net/~vriviere/+archive/ubuntu/ppa
   - .travis/deploy_changed_packages.sh -m68k-atari-mint ppa:vriviere/ppa
+  # Workaround for truncated Travis CI log
+  - sleep 1

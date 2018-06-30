@@ -18,7 +18,7 @@ Build-Depends: dpkg-dev (>= 1.14.15), debhelper (>= 5.0.62),
  locales [!m68k !knetbsd-i386 !knetbsd-alpha], procps, sharutils,
  binutils-spu (>= 2.20) [powerpc ppc64], newlib-spu (>= 1.16.0) [powerpc ppc64],
  libcloog-ppl-dev (>= 0.15), dejagnu [!m68k !hurd-i386 !hurd-alpha], autogen,
- realpath (>= 1.9.12), chrpath, lsb-release, make (>= 3.81), quilt,
+ coreutils (>= 8.23-1~) | realpath (>= 1.9.12), chrpath, lsb-release, make (>= 3.81), quilt,
  binutils-m68k-atari-mint, libmpc-dev (>= 0.8), libcloog-ppl-dev (>= 0.15),
  mintlib-m68k-atari-mint, pml-m68k-atari-mint
 Homepage: http://gcc.gnu.org/

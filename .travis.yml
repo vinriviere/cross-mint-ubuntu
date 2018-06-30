@@ -11,6 +11,9 @@ before_install:
   # Install our GnuPG key pair
   - .travis/install_gpg_keys.sh
   - unset GPG_KEYS
+  # Install our SSH key pair
+  - .travis/install_ssh_id.sh
+  - unset SSH_ID
   # Install additional packages
   - sudo apt-get install -y devscripts debhelper
   # Display packages versions

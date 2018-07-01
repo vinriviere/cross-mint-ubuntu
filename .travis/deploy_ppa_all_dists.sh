@@ -15,8 +15,8 @@ PPA=$2
 DISTS=
 DISTS+=" trusty"
 DISTS+=" xenial"
-DISTS+=" zesty"
 DISTS+=" artful"
+DISTS+=" bionic"
 
 # Use timestamp as package suffix to generate a unique version number
 SUFFIX=ppa$(date -u +%Y%m%d%H%M%S)

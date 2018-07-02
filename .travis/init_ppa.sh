@@ -8,7 +8,7 @@ then
   exit 1
 fi
 
-PPA=$1
+export PPA=$1
 
 PPA_HOST=ppa.launchpad.net
 PPA_LOGIN=$(echo $PPA | sed 's|^[^:]*:\([^/]*\)/.*|\1|')
@@ -25,7 +25,7 @@ echo "PPA=$PPA"
 # Set up a dput configuration to enable SFTP
 
 DPUT_CONFIG_FILE=~/.dput.cf
-DPUT_PROFILE=$(echo $PPA | sed 's/[^a-zA-Z]/_/g')
+export DPUT_PROFILE=$(echo $PPA | sed 's/[^a-zA-Z]/_/g')
 
 cat >$DPUT_CONFIG_FILE <<EOF
 [$DPUT_PROFILE]

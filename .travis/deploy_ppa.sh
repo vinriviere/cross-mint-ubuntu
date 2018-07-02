@@ -33,21 +33,9 @@ cd ..
 echo "\$ ls -l"
 ls -l
 
-# Override PPA for SFTP
-ssh-keyscan ppa.launchpad.net >> ~/.ssh/known_hosts
-cat >~/.dput.cf <<EOF
-[my-ppa]
-fqdn = ppa.launchpad.net
-method = sftp
-incoming = ~vriviere/ubuntu/ppa/
-login = vriviere
-allow_unsigned_uploads = 0
-EOF
-PPA=my-ppa
-
 # Upload the source package
 echo "\$ dput -f $PPA ${PACKAGE}_${NEW_VERSION}_source.changes"
-dput -d -d $PPA ${PACKAGE}_${NEW_VERSION}_source.changes
+dput -d -d $DPUT_PROFILE ${PACKAGE}_${NEW_VERSION}_source.changes
 
 # Delete uploaded packages
 echo "\$ rm ${PACKAGE}_$NEW_VERSION*"

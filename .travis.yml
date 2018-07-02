@@ -21,6 +21,8 @@ before_install:
   - dpkg --version
 
 script:
+  # Workaround for truncated Travis CI log
+  - function finish { sleep 1; } ; trap finish EXIT
   # Set FIXED_TRAVIS_COMMIT_RANGE
   - . .travis/fix_travis_commit_range.sh
   # Fail on first error
@@ -45,5 +47,3 @@ script:
 #  - .travis/deploy_ppa_all_dists.sh sdl-m68k-atari-mint $PPA
 #  - .travis/deploy_ppa_all_dists.sh openssl-m68k-atari-mint $PPA
   - echo "Packages will be available at $PPA_URL"
-  # Workaround for truncated Travis CI log
-  - sleep 1

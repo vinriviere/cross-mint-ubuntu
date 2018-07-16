@@ -33,6 +33,7 @@ build_package pml-m68k-atari-mint
 build_package gemlib-m68k-atari-mint
 build_package cross-mint-essential
 build_package cflib-m68k-atari-mint
+build_package gemma-m68k-atari-mint
 build_package ldg-m68k-atari-mint
 build_package sdl-m68k-atari-mint
 build_package ncurses-m68k-atari-mint

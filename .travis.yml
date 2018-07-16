@@ -46,4 +46,5 @@ script:
 #  - .travis/deploy_ppa_all_dists.sh cross-mint-essential
 #  - .travis/deploy_ppa_all_dists.sh sdl-m68k-atari-mint
 #  - .travis/deploy_ppa_all_dists.sh openssl-m68k-atari-mint
+#  - .travis/deploy_ppa_all_dists.sh gemma-m68k-atari-mint
   - echo "Packages will be available at $PPA_URL"

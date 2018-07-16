@@ -1,0 +1,17 @@
+Source: gemma-m68k-atari-mint
+Section: devel
+Priority: optional
+Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
+Standards-Version: 3.7.3
+Build-Depends: debhelper (>= 5.0.0), make,
+ gcc-m68k-atari-mint,
+ gemlib-m68k-atari-mint (>= 0.43.6-qGit-20170304-1)
+Homepage: https://github.com/freemint/gemma
+
+Package: gemma-m68k-atari-mint
+Section: devel
+Architecture: any
+Priority: optional
+Description: gemma, the GEM application support library  for Atari MiNT.
+ This package is primarily for Atari MiNT developers and is
+ not needed by normal users or developers.

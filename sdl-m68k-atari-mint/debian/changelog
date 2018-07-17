@@ -1,3 +1,10 @@
+sdl-m68k-atari-mint (1.2-HG-20170326-1) unstable; urgency=medium
+
+  * Upgrade to version 1.2-HG-20170326.
+    This fixes the interrupt mask for non-Atari hardware (Amiga).
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 17 Jul 2018 10:16:03 +0200
+
 sdl-m68k-atari-mint (1.2-HG-20140906-3) unstable; urgency=medium
 
   * Clean up debian/control.

@@ -1,3 +1,9 @@
+cflib-m68k-atari-mint (0.21.0-Git-20170304-1) unstable; urgency=low
+
+  * Upgrade to the latest Git version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 17 Jul 2018 10:08:35 +0200
+
 cflib-m68k-atari-mint (0.21.0-CVS-20130415-4) unstable; urgency=low
 
   * Clean up debian/control.

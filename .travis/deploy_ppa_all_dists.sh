@@ -14,7 +14,6 @@ PACKAGE=$1
 DISTS=
 DISTS+=" trusty"
 DISTS+=" xenial"
-DISTS+=" artful"
 DISTS+=" bionic"
 DISTS+=" cosmic"
 

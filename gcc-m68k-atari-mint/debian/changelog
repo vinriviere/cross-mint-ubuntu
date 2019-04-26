@@ -1,3 +1,9 @@
+gcc-m68k-atari-mint (4.6.4-mint-20170417-6) unstable; urgency=medium
+
+  * Remove libcloog-ppl-dev dependency for Ubuntu 19.04 Disco Dingo.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 27 Apr 2019 00:10:25 +0200
+
 gcc-m68k-atari-mint (4.6.4-mint-20170417-5) unstable; urgency=medium
 
   * Fix autoconf dependency for Ubuntu 17.10 Artful Aardvark.

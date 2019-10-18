@@ -12,10 +12,8 @@ PACKAGE=$1
 
 # List of all active Ubuntu distributions
 DISTS=
-DISTS+=" trusty"
 DISTS+=" xenial"
 DISTS+=" bionic"
-DISTS+=" cosmic"
 DISTS+=" disco"
 
 # Use timestamp as package suffix to generate a unique version number

@@ -1,3 +1,11 @@
+gcc-m68k-atari-mint (4.6.4-mint-20191018-2) unstable; urgency=medium
+
+  * Fix build for default CPUs different than -m68000
+  * Backport gcc 7.3.0's multilib patch
+  * Fix compilation with GCC 9.2.1 for Ubuntu 19.10 Eoan Ermine.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 18 Oct 2019 23:07:43 +0200
+
 gcc-m68k-atari-mint (4.6.4-mint-20170417-6) unstable; urgency=medium
 
   * Remove libcloog-ppl-dev dependency for Ubuntu 19.04 Disco Dingo.

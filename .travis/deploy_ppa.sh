@@ -32,8 +32,8 @@ echo "\$ dpkg-parsechangelog"
 dpkg-parsechangelog
 
 # Build the source package
-echo "\$ dpkg-buildpackage -S"
-dpkg-buildpackage -S
+echo "\$ dpkg-buildpackage -S -d"
+dpkg-buildpackage -S -d
 
 cd ..
 echo "\$ ls -l"

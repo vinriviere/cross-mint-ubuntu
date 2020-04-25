@@ -2,7 +2,7 @@
 # in order to define the DEBEMAIL variable
 # . .travis/guess_debemail.sh
 
-# Unset variables which might interfer
+# Unset variables which might interfere
 # https://manpages.debian.org/jessie/devscripts/debchange.1.fr.html#DESCRIPTION
 unset DEBFULLNAME EMAIL
 

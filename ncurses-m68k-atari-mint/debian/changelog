@@ -1,3 +1,9 @@
+ncurses-m68k-atari-mint (5.9-6) unstable; urgency=medium
+
+  * Set Architecture to "all" for cross-libraries.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 01 May 2020 11:21:57 +0200
+
 ncurses-m68k-atari-mint (5.9-5) unstable; urgency=low
 
   * Clean up debian/control.

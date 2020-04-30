@@ -1,3 +1,9 @@
+zlib-m68k-atari-mint (1.2.8-4) unstable; urgency=medium
+
+  * Set Architecture to "all" for cross-libraries.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 01 May 2020 11:22:55 +0200
+
 zlib-m68k-atari-mint (1.2.8-3) unstable; urgency=low
 
   * Clean up debian/control.

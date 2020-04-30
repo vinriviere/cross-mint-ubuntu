@@ -1,3 +1,9 @@
+gemma-m68k-atari-mint (0-Git-20180716-4) unstable; urgency=medium
+
+  * Set Architecture to "all" for cross-libraries.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 01 May 2020 11:21:08 +0200
+
 gemma-m68k-atari-mint (0-Git-20180716-3) unstable; urgency=low
 
   * Initial version.

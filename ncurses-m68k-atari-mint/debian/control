@@ -9,7 +9,7 @@ Homepage: ftp://invisible-island.net/ncurses/
 
 Package: ncurses-m68k-atari-mint
 Section: devel
-Architecture: any
+Architecture: all
 Priority: optional
 Description: ncurses for Atari MiNT.
  A library for making fullscreen textmode programs.

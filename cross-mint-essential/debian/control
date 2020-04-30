@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 5.0.0)
 
 Package: cross-mint-essential
 Section: devel
-Architecture: any
+Architecture: all
 Priority: optional
 Depends: binutils-m68k-atari-mint,
  mintbin-m68k-atari-mint,

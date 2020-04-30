@@ -1,3 +1,9 @@
+ldg-m68k-atari-mint (2.32-ldg-SVN-20131104-4) unstable; urgency=medium
+
+  * Set Architecture to "all" for cross-libraries.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 01 May 2020 11:21:30 +0200
+
 ldg-m68k-atari-mint (2.32-ldg-SVN-20131104-3) unstable; urgency=low
 
   * Clean up debian/control.

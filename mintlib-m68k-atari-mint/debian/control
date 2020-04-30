@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 5.0.0), make, bash, gcc-m68k-atari-mint,
 Package: mintlib-m68k-atari-mint
 Provides: libc-m68k-atari-mint
 Section: devel
-Architecture: any
+Architecture: all
 Priority: optional
 Description: MiNTLib, the Atari MiNT standard library.
  This package is primarily for Atari MiNT developers and is

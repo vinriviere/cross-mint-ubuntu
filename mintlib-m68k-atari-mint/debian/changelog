@@ -1,3 +1,9 @@
+mintlib-m68k-atari-mint (0.60.1.Git-20170304-7) unstable; urgency=medium
+
+  * Set Architecture to "all" for cross-libraries.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 01 May 2020 11:21:47 +0200
+
 mintlib-m68k-atari-mint (0.60.1.Git-20170304-6) unstable; urgency=medium
 
   * Clean up debian/control.

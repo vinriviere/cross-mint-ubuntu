@@ -11,7 +11,7 @@ Homepage: http://www.openssl.org/
 
 Package: openssl-m68k-atari-mint
 Section: devel
-Architecture: any
+Architecture: all
 Priority: optional
 Depends: zlib-m68k-atari-mint, readline-m68k-atari-mint
 Description: OpenSSL for Atari MiNT.

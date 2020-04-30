@@ -11,7 +11,7 @@ Homepage: http://www.gnu.org/software/readline/
 
 Package: readline-m68k-atari-mint
 Section: devel
-Architecture: any
+Architecture: all
 Priority: optional
 Depends: ncurses-m68k-atari-mint
 Description: readline for Atari MiNT.

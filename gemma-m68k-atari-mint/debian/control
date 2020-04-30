@@ -10,7 +10,7 @@ Homepage: https://github.com/freemint/gemma
 
 Package: gemma-m68k-atari-mint
 Section: devel
-Architecture: any
+Architecture: all
 Priority: optional
 Description: gemma, the GEM application support library  for Atari MiNT.
  This package is primarily for Atari MiNT developers and is

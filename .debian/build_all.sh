@@ -17,7 +17,11 @@ build_package ()
 
   # Get binary package name
   VERSION=$(dpkg-parsechangelog | sed -n 's/^Version: *//p')
-  ARCH=$(dpkg-architecture -q DEB_BUILD_ARCH)
+  ARCH=$(sed -n 's/^Architecture: *//p' debian/control)
+  if [ $ARCH = any ]
+  then
+    ARCH=$(dpkg-architecture -q DEB_BUILD_ARCH)
+  fi
   DEB=${PACKAGE}_${VERSION}_$ARCH.deb
 
   # Install the binary package

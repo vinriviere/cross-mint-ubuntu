@@ -1,3 +1,9 @@
+openssl-m68k-atari-mint (1.0.1e-3) unstable; urgency=medium
+
+  * Set Architecture to "all" for cross-libraries.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 01 May 2020 11:22:09 +0200
+
 openssl-m68k-atari-mint (1.0.1e-2) unstable; urgency=low
 
   * Clean up debian/control.

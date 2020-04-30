@@ -10,7 +10,7 @@ Homepage: http://ldg.sourceforge.net/
 
 Package: ldg-m68k-atari-mint
 Section: devel
-Architecture: any
+Architecture: all
 Priority: optional
 Depends: gemlib-m68k-atari-mint
 Description: LDG, the Gem Dynamical Libraries for Atari MiNT.

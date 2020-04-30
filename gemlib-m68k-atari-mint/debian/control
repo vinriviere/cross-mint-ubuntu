@@ -9,7 +9,7 @@ Homepage: http://arnaud.bercegeay.free.fr/gemlib/
 
 Package: gemlib-m68k-atari-mint
 Section: devel
-Architecture: any
+Architecture: all
 Priority: optional
 Description: GEMlib, the GEM library for Atari MiNT.
  This package is primarily for Atari MiNT developers and is

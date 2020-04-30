@@ -14,7 +14,6 @@ PACKAGE=$1
 DISTS=
 DISTS+=" xenial"
 DISTS+=" bionic"
-DISTS+=" disco"
 DISTS+=" eoan"
 DISTS+=" focal"
 

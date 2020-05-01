@@ -1,3 +1,10 @@
+gcc-m68k-atari-mint (4.6.4-mint-20200502-1) unstable; urgency=medium
+
+  * Add support for aarch64 build hosts.
+  * Disable LTO for MiNT target.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 02 May 2020 12:08:33 +0200
+
 gcc-m68k-atari-mint (4.6.4-mint-20191018-2) unstable; urgency=medium
 
   * Fix build for default CPUs different than -m68000

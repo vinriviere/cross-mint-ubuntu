@@ -24,7 +24,7 @@ echo "# Deploying $PACKAGE for $DIST to $PPA"
 cd $PACKAGE
 
 # Update the changelog with new version
-OLD_VERSION=$(dpkg-parsechangelog | sed -n 's/^Version: *//p')
+OLD_VERSION=$(dpkg-parsechangelog -S Version)
 NEW_VERSION=$OLD_VERSION$SUFFIX~$DIST
 dch --force-distribution -D $DIST -v $NEW_VERSION "Create PPA source package for $DIST".
 

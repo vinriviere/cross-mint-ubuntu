@@ -16,7 +16,7 @@ build_package ()
   dpkg-buildpackage
 
   # Get binary package name
-  VERSION=$(dpkg-parsechangelog | sed -n 's/^Version: *//p')
+  VERSION=$(dpkg-parsechangelog -S Version)
   ARCH=$(sed -n 's/^Architecture: *//p' debian/control)
   if [ $ARCH = any ]
   then

@@ -24,6 +24,8 @@ echo "# Deploying $PACKAGE for $DIST to $PPA"
 cd $PACKAGE
 
 # Update the changelog with new version
+# Because each package in PPA must have a unique version
+# and because PPA can't share source packages across distributions.
 OLD_VERSION=$(dpkg-parsechangelog -S Version)
 NEW_VERSION=$OLD_VERSION$SUFFIX~$DIST
 dch --force-distribution -D $DIST -v $NEW_VERSION "Create PPA source package for $DIST".

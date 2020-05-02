@@ -40,8 +40,11 @@ echo "\$ ls -l"
 ls -l
 
 # Upload the source package
-echo "\$ dput -d -d $DPUT_PROFILE ${PACKAGE}_${NEW_VERSION}_source.changes"
-dput -d -d $DPUT_PROFILE ${PACKAGE}_${NEW_VERSION}_source.changes
+CHANGES_FILE=${PACKAGE}_${NEW_VERSION}_source.changes
+echo "\$ cat $CHANGES_FILE"
+cat $CHANGES_FILE
+echo "\$ dput -d -d $DPUT_PROFILE CHANGES_FILE"
+dput -d -d $DPUT_PROFILE $CHANGES_FILE
 
 # Delete uploaded packages
 echo "\$ rm ${PACKAGE}_$NEW_VERSION*"

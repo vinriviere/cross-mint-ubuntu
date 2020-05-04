@@ -63,6 +63,7 @@ install: build
 		$(MAKE) install $(MAKE_OVERRIDES)
 
 	# Cleanup
+	rm -r $(BINARY_BASE)/sbin
 	rm -r $(BINARY_BASE)/share
 	find  $(BINARY_BASE)/lib '(' -name '*.a' -o -name '*.o' ')' -print -exec m68k-atari-mint-strip -S -X -w -N '.L[0-9]*' '{}' ';'
 

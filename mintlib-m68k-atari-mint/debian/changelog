@@ -1,3 +1,9 @@
+mintlib-m68k-atari-mint (0.60.1.Git-20200504-1) unstable; urgency=medium
+
+  * Upgrade to the latest Git version
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Mon, 04 May 2020 23:20:04 +0200
+
 mintlib-m68k-atari-mint (0.60.1.Git-20171106-1) unstable; urgency=medium
 
   * Upgrade to the latest Git version

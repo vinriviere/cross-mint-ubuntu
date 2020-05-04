@@ -1,3 +1,12 @@
+gcc-m68k-atari-mint (4.6.4-mint-20200504-1) unstable; urgency=medium
+
+  * Recompile with latest MiNTLib:
+    New MiNTLib implementation of <ctype.h> is incompatible with previous one.
+    Simple C++ programs using <iostream> didn't compile anymore.
+  * Update C++ ctype_base.h accordingly.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 05 May 2020 00:20:47 +0200
+
 gcc-m68k-atari-mint (4.6.4-mint-20200502-1) unstable; urgency=medium
 
   * Add support for aarch64 build hosts.

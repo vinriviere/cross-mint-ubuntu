@@ -1,3 +1,11 @@
+pml-m68k-atari-mint (2.03-mint-20110207-11) unstable; urgency=medium
+
+  * Add extra patch needed for MiNTLib >= 20190412
+    Source:
+    https://github.com/mikrosk/m68k-atari-mint-build/commit/e8a8c8286f098a4a4ac11a8cb156b99560a60589
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 05 May 2020 01:10:37 +0200
+
 pml-m68k-atari-mint (2.03-mint-20110207-10) unstable; urgency=medium
 
   * Set Architecture to "all" for cross-libraries.

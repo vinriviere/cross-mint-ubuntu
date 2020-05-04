@@ -5,24 +5,21 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-# These are used for cross-compiling and for saving the configure script
-# from having to guess our platform (since we know it already)
-DEB_BUILD_GNU_TYPE      := $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
-DEB_HOST_GNU_TYPE       := $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
-
-tarball := $(wildcard mintlib-*.tar.gz)
-patch   := $(wildcard mintlib-*.patch.bz2)
+tarball := $(wildcard mintlib-*.tar.*)
 
 srcdir  := $(shell echo $(tarball) | sed -e 's/\.tar\..*//')
 
 # FIXME: one-char vars are evil, even more than emacs.
 D := $(CURDIR)/debian/mintlib-m68k-atari-mint
 
+BINARY_BASE := $(D)/usr/m68k-atari-mint
+MAKE_OVERRIDES := SHELL=/bin/bash CROSS_TOOL=m68k-atari-mint prefix=$(BINARY_BASE)
+
 unpack: unpack-stamp
 unpack-stamp:
 	dh_testdir
 
-	tar zxf $(tarball)
+	tar xf $(tarball)
 	mv $(srcdir) build
 
 	touch unpack-stamp
@@ -30,9 +27,6 @@ unpack-stamp:
 patch: patch-stamp
 patch-stamp: unpack-stamp
 	dh_testdir
-
-	cd build && \
-		bzcat ../$(patch) | patch -p1
 
 	# Workaround for:
 	# warning: implicit declaration of function [...]  [-Wimplicit-function-declaration]
@@ -46,17 +40,15 @@ configure: configure-stamp
 configure-stamp: patch-stamp
 	dh_testdir
 
-	cd build && \
-		sed -i "s:^\( prefix=\)/usr/m68k-atari-mint.*:\1$(D)/usr/m68k-atari-mint:g" configvars && \
-		sed -i "s:^#CROSS=yes$$:CROSS=yes:g" configvars
-
 	touch configure-stamp
 
 build: configure-stamp build-stamp
 build-stamp:
 	dh_testdir
+
 	cd build && \
-		$(MAKE) SHELL=/bin/bash
+		$(MAKE) $(MAKE_OVERRIDES)
+
 	touch build-stamp
 
 install: build
@@ -65,14 +57,14 @@ install: build
 	dh_clean -k
 	dh_installdirs
 
-	# Add here commands to install the package into debian/mintlib-m68k-atari-mint
-	mkdir -p $(D)/usr/m68k-atari-mint
+	# Add here commands to install the package into $(D)
+	mkdir -p $(BINARY_BASE)
 	cd build && \
-		$(MAKE) install DESTDIR=$(D) SHELL=/bin/bash
+		$(MAKE) install $(MAKE_OVERRIDES)
 
 	# Cleanup
-	rm -r $(D)/usr/m68k-atari-mint/share
-	find  $(D)/usr/m68k-atari-mint/lib '(' -name '*.a' -o -name '*.o' ')' -print -exec m68k-atari-mint-strip -S -x '{}' ';'
+	rm -r $(BINARY_BASE)/share
+	find  $(BINARY_BASE)/lib '(' -name '*.a' -o -name '*.o' ')' -print -exec m68k-atari-mint-strip -S -X -w -N '.L[0-9]*' '{}' ';'
 
 clean:
 	dh_testdir
@@ -81,9 +73,6 @@ clean:
 	rm -f build-stamp configure-stamp patch-stamp unpack-stamp
 
 	dh_clean
-
-tst:
-	env
 
 # Build architecture-independent files here.
 binary-indep: build install

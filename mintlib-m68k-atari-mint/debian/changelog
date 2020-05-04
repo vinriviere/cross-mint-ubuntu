@@ -1,3 +1,10 @@
+mintlib-m68k-atari-mint (0.60.1.Git-20171106-1) unstable; urgency=medium
+
+  * Upgrade to the latest Git version
+  * Fix debian/rules accordingly (and clean up)
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Mon, 04 May 2020 14:44:18 +0200
+
 mintlib-m68k-atari-mint (0.60.1.Git-20170304-7) unstable; urgency=medium
 
   * Set Architecture to "all" for cross-libraries.

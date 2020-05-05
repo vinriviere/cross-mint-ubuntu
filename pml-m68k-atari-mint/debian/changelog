@@ -1,3 +1,11 @@
+pml-m68k-atari-mint (2.03-mint-20191013-3) unstable; urgency=medium
+
+  * Upgrade to version mint-20191013.
+    This cleanly includes the previous extra patch. No other change.
+  * Improve package dependencies.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 05 May 2020 21:23:32 +0200
+
 pml-m68k-atari-mint (2.03-mint-20110207-11) unstable; urgency=medium
 
   * Add extra patch needed for MiNTLib >= 20190412

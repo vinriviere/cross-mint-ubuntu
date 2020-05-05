@@ -20,7 +20,7 @@ Build-Depends: dpkg-dev (>= 1.14.15), debhelper (>= 5.0.62),
  dejagnu [!m68k !hurd-i386 !hurd-alpha], autogen,
  coreutils (>= 8.23-1~) | realpath (>= 1.9.12), chrpath, lsb-release, make (>= 3.81), quilt,
  binutils-m68k-atari-mint, libmpc-dev (>= 0.8),
- mintlib-m68k-atari-mint (>= 0.60.1.Git-20200504), pml-m68k-atari-mint
+ mintlib-m68k-atari-mint (>= 0.60.1.Git-20200504), libm-m68k-atari-mint
 Homepage: http://gcc.gnu.org/
 
 Package: gcc-m68k-atari-mint
@@ -28,7 +28,7 @@ Section: devel
 Architecture: any
 Priority: optional
 Depends: ${shlibs:Depends}, binutils-m68k-atari-mint,
- libc-m68k-atari-mint, libm-m68k-atari-mint
+ mintlib-m68k-atari-mint (>= 0.60.1.Git-20200504), libm-m68k-atari-mint
 Recommends: mintbin-m68k-atari-mint
 Description: GCC cross-compiler for building Atari MiNT executables.
  This is the GNU Compiler Collection configured to cross-build Atari MiNT

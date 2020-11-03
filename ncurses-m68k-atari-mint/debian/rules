@@ -48,7 +48,9 @@ configure-m68000-stamp: patch-stamp
 	../$(srcdir)/configure --prefix=/usr/m68k-atari-mint \
 			--build=$(DEB_BUILD_GNU_TYPE) \
 			--host=m68k-atari-mint \
+			--enable-overwrite \
 			--mandir=/usr/m68k-atari-mint/share/man \
+			--with-manpage-format=gzip \
 			--with-terminfo-dirs=/usr/share/terminfo \
 			--with-default-terminfo-dir=/usr/share/terminfo \
 			--without-debug \
@@ -68,7 +70,9 @@ configure-m68020-60-stamp: patch-stamp
 	../$(srcdir)/configure --prefix=/usr/m68k-atari-mint \
 			--build=$(DEB_BUILD_GNU_TYPE) \
 			--host=m68k-atari-mint \
+			--enable-overwrite \
 			--mandir=/usr/m68k-atari-mint/share/man \
+			--with-manpage-format=gzip \
 			--with-terminfo-dirs=/usr/share/terminfo \
 			--with-default-terminfo-dir=/usr/share/terminfo \
 			--without-debug \
@@ -88,7 +92,9 @@ configure-m5475-stamp: patch-stamp
 	../$(srcdir)/configure --prefix=/usr/m68k-atari-mint \
 			--build=$(DEB_BUILD_GNU_TYPE) \
 			--host=m68k-atari-mint \
+			--enable-overwrite \
 			--mandir=/usr/m68k-atari-mint/share/man \
+			--with-manpage-format=gzip \
 			--with-terminfo-dirs=/usr/share/terminfo \
 			--with-default-terminfo-dir=/usr/share/terminfo \
 			--without-debug \

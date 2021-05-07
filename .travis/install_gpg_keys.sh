@@ -37,8 +37,8 @@ echo $GPG_KEYS | base64 -d | unxz | gpg --import
 
 # Ultimately trust our own public key
 # This avoids warnings with dput
-MY_PUBKEY_ID=$(gpg --list-secret-keys | sed -n 's|^sec *[^/]*/\([^ ]*\).*|\1|p')
-MY_PUBKEY_FINGERPRINT=$(LANG= gpg --fingerprint $MY_PUBKEY_ID | sed -n 's/.*fingerprint = \(.*\)/\1/p' |sed 's/ //g')
+MY_PUBKEY_ID=$(gpg --list-secret-keys --keyid-format short | sed -n 's|^sec *[^/]*/\([^ ]*\).*|\1|p')
+MY_PUBKEY_FINGERPRINT=$(LANG= gpg --fingerprint $MY_PUBKEY_ID | sed -n '2 p' | sed 's/ //g')
 echo $MY_PUBKEY_FINGERPRINT:6: | gpg --import-ownertrust
 
 # Display our key details and trust level

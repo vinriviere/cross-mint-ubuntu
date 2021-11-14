@@ -1,10 +1,10 @@
 # This script fragment must be sourced by the main script file
 # in order to define the PPA_* and DPUT_* variables
-# . .travis/init_ppa.sh ppa:<user>/<ppa>
+# . .github/init_ppa.sh ppa:<user>/<ppa>
 
 if [ $# != 1 ]
 then
-  echo "usage: <ppa>" >&2
+  echo "usage: $0 <ppa>" >&2
   exit 1
 fi
 
@@ -45,11 +45,8 @@ cat $DPUT_CONFIG_FILE
 
 KNOWN_HOSTS_FILE=~/.ssh/known_hosts
 
-if ! grep "^$(echo $PPA_HOST | sed 's/\./\\./g') " $KNOWN_HOSTS_FILE
-then
-  echo
-  ssh-keyscan $PPA_HOST >> $KNOWN_HOSTS_FILE
-fi
+echo
+ssh-keyscan $PPA_HOST >> $KNOWN_HOSTS_FILE
 
 echo
 echo "# $KNOWN_HOSTS_FILE"

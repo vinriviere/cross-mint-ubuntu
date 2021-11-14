@@ -22,5 +22,5 @@ SUFFIX=ppa$(date -u +%Y%m%d%H%M%S)
 
 for DIST in $DISTS
 do
-  .travis/deploy_ppa.sh $PACKAGE $SUFFIX $DIST
+  .github/deploy_ppa.sh $PACKAGE $SUFFIX $DIST
 done

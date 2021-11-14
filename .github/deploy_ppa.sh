@@ -15,7 +15,7 @@ DIST=$3
 if [ -z ${DPUT_PROFILE+x} ]
 then
   echo "$0: error: DPUT_PROFILE variable must be set." >&2
-  echo "$0: Be sure to run \". .travis/init_ppa.sh ...\" before this script." >&2
+  echo "$0: Be sure to run \". .github/init_ppa.sh ...\" before this script." >&2
   exit 1
 fi
 
@@ -45,7 +45,7 @@ ls -l
 CHANGES_FILE=${PACKAGE}_${NEW_VERSION}_source.changes
 echo "\$ cat $CHANGES_FILE"
 cat $CHANGES_FILE
-echo "\$ dput -d -d $DPUT_PROFILE CHANGES_FILE"
+echo "\$ dput -d -d $DPUT_PROFILE $CHANGES_FILE"
 dput -d -d $DPUT_PROFILE $CHANGES_FILE
 
 # Delete uploaded packages

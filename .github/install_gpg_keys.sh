@@ -16,14 +16,15 @@
 # clean state.
 #
 # Generate a new key pair, with empty passphrase.
-# gpg --gen-key
+# gpg --homedir . --gen-key
 #
-# Export the resulting privte/public key
-# gpg --export-secret-key --armor | xz | base64 -w 0
+# Export the resulting private/public key
+# gpg --homedir . --export-secret-key --armor | xz | base64 -w 0
 #
 # Select the resulting encoded text (several lines) to copy it to the clipboard.
 # Then go to the Travis CI project settings:
-# https://travis-ci.org/vinriviere/cross-mint-ubuntu/settings
+# FIXME: https://travis-ci.org/vinriviere/cross-mint-ubuntu/settings
+# https://github.com/vinriviere/cross-mint-ubuntu/settings/secrets/actions
 # Create a new environment variable named GPG_KEYS, and paste the value.
 # The script below will import the keys from that variable contents.
 
@@ -42,4 +43,4 @@ MY_PUBKEY_FINGERPRINT=$(LANG= gpg --fingerprint $MY_PUBKEY_ID | sed -n '2 p' | s
 echo $MY_PUBKEY_FINGERPRINT:6: | gpg --import-ownertrust
 
 # Display our key details and trust level
-echo quit | gpg --command-fd 0 --edit-key $MY_PUBKEY_ID
+gpg --export-ownertrust

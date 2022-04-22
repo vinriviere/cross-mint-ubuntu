@@ -12,11 +12,8 @@ PACKAGE=$1
 
 # List of all active Ubuntu distributions
 DISTS=
-DISTS+=" xenial"
 DISTS+=" bionic"
 DISTS+=" focal"
-DISTS+=" groovy"
-DISTS+=" hirsute"
 DISTS+=" impish"
 
 # Use timestamp as package suffix to generate a unique version number

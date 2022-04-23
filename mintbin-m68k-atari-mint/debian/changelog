@@ -1,3 +1,9 @@
+mintbin-m68k-atari-mint (0.3-qCVS-20110527-3) unstable; urgency=low
+
+  * Upgrade to debhelper 10.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 23 Apr 2022 15:25:12 +0200
+
 mintbin-m68k-atari-mint (0.3-qCVS-20110527-2) unstable; urgency=low
 
   * Clean up debian/control.

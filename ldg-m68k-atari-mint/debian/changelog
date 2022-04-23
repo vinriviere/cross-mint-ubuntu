@@ -1,3 +1,9 @@
+ldg-m68k-atari-mint (2.32-ldg-SVN-20131104-5) unstable; urgency=medium
+
+  * Upgrade to debhelper 10.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 23 Apr 2022 15:25:12 +0200
+
 ldg-m68k-atari-mint (2.32-ldg-SVN-20131104-4) unstable; urgency=medium
 
   * Set Architecture to "all" for cross-libraries.

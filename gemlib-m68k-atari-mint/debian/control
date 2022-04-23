@@ -3,7 +3,7 @@ Section: devel
 Priority: optional
 Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
 Standards-Version: 3.7.3
-Build-Depends: debhelper (>= 5.0.0), make,
+Build-Depends: debhelper (>= 10), make,
  gcc-m68k-atari-mint
 Homepage: http://arnaud.bercegeay.free.fr/gemlib/
 

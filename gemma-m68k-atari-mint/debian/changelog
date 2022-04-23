@@ -1,3 +1,9 @@
+gemma-m68k-atari-mint (0-Git-20180716-5) unstable; urgency=medium
+
+  * Upgrade to debhelper 10.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 23 Apr 2022 15:25:12 +0200
+
 gemma-m68k-atari-mint (0-Git-20180716-4) unstable; urgency=medium
 
   * Set Architecture to "all" for cross-libraries.

@@ -1,3 +1,9 @@
+sdl-m68k-atari-mint (1.2-HG-20170326-3) unstable; urgency=medium
+
+  * Upgrade to debhelper 10.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 23 Apr 2022 15:25:12 +0200
+
 sdl-m68k-atari-mint (1.2-HG-20170326-2) unstable; urgency=medium
 
   * Set Architecture to "all" for cross-libraries.

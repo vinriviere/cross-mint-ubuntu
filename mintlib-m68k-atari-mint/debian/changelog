@@ -1,3 +1,9 @@
+mintlib-m68k-atari-mint (0.60.1.Git-20200504-2) unstable; urgency=medium
+
+  * Upgrade to debhelper 10.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 23 Apr 2022 15:25:12 +0200
+
 mintlib-m68k-atari-mint (0.60.1.Git-20200504-1) unstable; urgency=medium
 
   * Upgrade to the latest Git version

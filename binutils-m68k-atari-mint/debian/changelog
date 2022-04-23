@@ -1,3 +1,9 @@
+binutils-m68k-atari-mint (2.30-mint-20180703-2) unstable; urgency=medium
+
+  * Upgrade to debhelper 10.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 23 Apr 2022 15:25:12 +0200
+
 binutils-m68k-atari-mint (2.30-mint-20180703-1) unstable; urgency=medium
 
   * Upgrade to version 2.30.

@@ -3,7 +3,7 @@ Section: devel
 Priority: optional
 Maintainer: Vincent Riviere <vincent.riviere@freesbee.fr>
 Standards-Version: 3.7.3
-Build-Depends: debhelper (>= 5.0.0), make,
+Build-Depends: debhelper (>= 10), make,
  gcc-m68k-atari-mint, libc-m68k-atari-mint
 Build-Conflicts: mintlib-m68k-atari-mint (< 0.60.1.Git-20200504)
 Homepage: http://www.umich.edu/~archive/atari/Gnustuff/Tos/Pmathlib/

@@ -14,7 +14,6 @@ PACKAGE=$1
 DISTS=
 DISTS+=" bionic"
 DISTS+=" focal"
-DISTS+=" impish"
 DISTS+=" jammy"
 
 # Use timestamp as package suffix to generate a unique version number

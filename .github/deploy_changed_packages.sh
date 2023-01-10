@@ -10,10 +10,12 @@ fi
 
 PACKAGES_SUFFIX=$1
 
-MODIFIED_PACKAGES=$(git log $FIXED_TRAVIS_COMMIT_RANGE --name-status | sed -n "s,^[AM]\t\(\(.*-m68k-atari-mint\|cross-mint-essential\)\)/.*,\1,p" | sort | uniq)
+git fetch --unshallow origin $COMMIT_BEFORE $COMMIT_AFTER
+COMMIT_RANGE=$COMMIT_BEFORE..$COMMIT_AFTER
+MODIFIED_PACKAGES=$(git log $COMMIT_RANGE --name-status | sed -n "s,^[AM]\t\(\(.*-m68k-atari-mint\|cross-mint-essential\)\)/.*,\1,p" | sort | uniq)
 echo "MODIFIED_PACKAGES=$MODIFIED_PACKAGES"
 
 for PACKAGE in $MODIFIED_PACKAGES
 do
-  .travis/deploy_ppa_all_dists.sh $PACKAGE
+  .github/deploy_ppa_all_dists.sh $PACKAGE
 done

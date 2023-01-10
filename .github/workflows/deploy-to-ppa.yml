@@ -17,4 +17,7 @@ jobs:
       # Install additional packages
       - run: sudo apt-get install -y devscripts debhelper dput python3-paramiko
       # Main script
-      - run: .github/main.sh
+      - env:
+          COMMIT_BEFORE: ${{ github.event.before }}
+          COMMIT_AFTER: ${{ github.event.after }}
+        run: .github/main.sh

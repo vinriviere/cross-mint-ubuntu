@@ -19,7 +19,7 @@ echorun . .github/guess_debemail.sh
 # Deploy updated packages to Ubuntu Launchpad PPA
 echorun . .github/init_ppa.sh ppa:vriviere/ppa
 
-#echorun .github/deploy_changed_packages.sh -m68k-atari-mint
+echorun .github/deploy_changed_packages.sh -m68k-atari-mint
 
 # The lines below are sorted according to dependencies
 #echorun .github/deploy_ppa_all_dists.sh binutils-m68k-atari-mint

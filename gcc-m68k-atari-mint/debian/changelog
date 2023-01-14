@@ -1,3 +1,9 @@
+gcc-m68k-atari-mint (4.6.4-mint-20200504-5) unstable; urgency=medium
+
+  * Rebuild with mintlib-Git-20220821.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 14 Jan 2023 21:22:54 +0100
+
 gcc-m68k-atari-mint (4.6.4-mint-20200504-4) unstable; urgency=medium
 
   * Upgrade to debhelper 10.

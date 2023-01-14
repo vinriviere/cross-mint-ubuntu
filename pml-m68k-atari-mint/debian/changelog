@@ -1,3 +1,9 @@
+pml-m68k-atari-mint (2.03-mint-20191013-5) unstable; urgency=medium
+
+  * Rebuild with mintlib-Git-20220821.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sat, 14 Jan 2023 21:03:47 +0100
+
 pml-m68k-atari-mint (2.03-mint-20191013-4) unstable; urgency=medium
 
   * Upgrade to debhelper 10.

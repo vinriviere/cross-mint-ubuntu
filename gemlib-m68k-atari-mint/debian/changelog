@@ -1,3 +1,9 @@
+gemlib-m68k-atari-mint (0.44.0-Git-20230112-1) unstable; urgency=medium
+
+  * Upgrade to the latest Git version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 15 Jan 2023 14:14:52 +0100
+
 gemlib-m68k-atari-mint (0.43.6-qGit-20170304-3) unstable; urgency=medium
 
   * Upgrade to debhelper 10.

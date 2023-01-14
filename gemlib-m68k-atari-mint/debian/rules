@@ -38,20 +38,13 @@ patch-stamp: unpack-stamp
 configure: configure-stamp
 configure-stamp: patch-stamp
 	dh_testdir
-
-	cd build && \
-		sed -i "s/^#CROSS = yes$$/CROSS = yes/g" CONFIGVARS && \
-		sed -i "s/^CROSS = no$$/#CROSS = no/g" CONFIGVARS && \
-		sed -i "s/^WITH_020_LIB =.*/WITH_020_LIB = yes/g" CONFIGVARS && \
-		sed -i "s/^WITH_V4E_LIB =.*/WITH_V4E_LIB = yes/g" CONFIGVARS
-
 	touch configure-stamp
 
 build: configure-stamp build-stamp
 build-stamp:
 	dh_testdir
-	cd build/gemlib && \
-		$(MAKE)
+	cd build && \
+		$(MAKE) CROSS=yes PREFIX=/usr/m68k-atari-mint V=1
 	touch build-stamp
 
 install: build
@@ -62,9 +55,8 @@ install: build
 
 	# Add here commands to install the package into debian/gemlib-m68k-atari-mint
 	mkdir -p $(D)/usr/m68k-atari-mint
-	cd build/gemlib && \
-		sed -i "s:^PREFIX=.*:PREFIX=$(D)/usr/m68k-atari-mint:g" ../CONFIGVARS && \
-		$(MAKE) install
+	cd build && \
+		$(MAKE) install CROSS=yes PREFIX=$(D)/usr/m68k-atari-mint V=1
 
 	# Cleanup
 	rm    $(D)/usr/m68k-atari-mint/lib/libgem16.a

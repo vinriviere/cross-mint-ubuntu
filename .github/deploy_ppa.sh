@@ -42,15 +42,16 @@ echo "\$ ls -l"
 ls -l
 
 # Upload the source package
-CHANGES_FILE=${PACKAGE}_${NEW_VERSION}_source.changes
+PACKAGE_PREFIX=${PACKAGE}_$(echo $NEW_VERSION | sed 's/^[^:]://')
+CHANGES_FILE=${PACKAGE_PREFIX}_source.changes
 echo "\$ cat $CHANGES_FILE"
 cat $CHANGES_FILE
 echo "\$ dput -d -d $DPUT_PROFILE $CHANGES_FILE"
 dput -d -d $DPUT_PROFILE $CHANGES_FILE
 
 # Delete uploaded packages
-echo "\$ rm ${PACKAGE}_$NEW_VERSION*"
-rm  ${PACKAGE}_$NEW_VERSION*
+echo "\$ rm $PACKAGE_PREFIX*"
+rm $PACKAGE_PREFIX*
 
 # Cancel temporary changes made in changelog
 echo "\$ git reset --hard"

@@ -1,3 +1,9 @@
+zlib-m68k-atari-mint (1.2.13-1) unstable; urgency=medium
+
+  * Upgrade to version 1.2.13
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 15 Jan 2023 17:39:55 +0100
+
 zlib-m68k-atari-mint (1.2.8-5) unstable; urgency=medium
 
   * Upgrade to debhelper 10.

@@ -40,20 +40,15 @@ configure-stamp: patch-stamp
 	dh_testdir
 
 	cd build && \
-		sed -i "s/^#CROSS = yes$$/CROSS = yes/g" CONFIGVARS && \
-		sed -i "s/^CROSS = no$$/#CROSS = no/g" CONFIGVARS && \
-		sed -i "s/^WITH_020_LIB =.*/WITH_020_LIB = yes/g" CONFIGVARS && \
-		sed -i "s/^WITH_V4E_LIB =.*/WITH_V4E_LIB = yes/g" CONFIGVARS
+		sed -i 's|^\sinstall .*stguide.*|#&|' Makefile
 
 	touch configure-stamp
 
 build: configure-stamp build-stamp
 build-stamp:
 	dh_testdir
-	cd build/cflib && \
-		$(MAKE) normal && \
-		$(MAKE) normal020 && \
-		$(MAKE) normalv4e
+	cd build && \
+		$(MAKE) CROSS=yes PREFIX=/usr/m68k-atari-mint V=1
 	touch build-stamp
 
 install: build
@@ -64,13 +59,12 @@ install: build
 
 	# Add here commands to install the package into debian/cflib-m68k-atari-mint
 	mkdir -p $(D)/usr/m68k-atari-mint
-	cd build/cflib && \
-		install -D -m 644 cflib.h $(D)/usr/m68k-atari-mint/include/cflib.h && \
-		install -D -m 644 libcflib.a $(D)/usr/m68k-atari-mint/lib/libcflib.a && \
-		install -D -m 644 libcflib020.a $(D)/usr/m68k-atari-mint/lib/m68020-60/libcflib.a && \
-		install -D -m 644 libcflibv4e.a $(D)/usr/m68k-atari-mint/lib/m5475/libcflib.a
+	cd build && \
+		$(MAKE) install CROSS=yes PREFIX=$(D)/usr/m68k-atari-mint V=1
 
 	# Cleanup
+	rm -r $(D)/usr/m68k-atari-mint/lib/mshort
+	rm    $(D)/usr/m68k-atari-mint/lib/libcflib16.a
 	find  $(D)/usr/m68k-atari-mint/lib -name '*.a' -print -exec m68k-atari-mint-strip -S -x '{}' ';'
 
 clean:

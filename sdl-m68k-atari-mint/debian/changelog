@@ -1,3 +1,9 @@
+sdl-m68k-atari-mint (1.2.16-Git-20230104-1) unstable; urgency=medium
+
+  * Upgrade to the latest Git version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 15 Jan 2023 16:56:50 +0100
+
 sdl-m68k-atari-mint (1.2-HG-20170326-3) unstable; urgency=medium
 
   * Upgrade to debhelper 10.

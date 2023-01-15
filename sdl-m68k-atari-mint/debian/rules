@@ -126,7 +126,7 @@ install-m68000-stamp:
 		$(MAKE) install DESTDIR=$(D)
 
 	mkdir -p $(D)/usr/share/doc/sdl-m68k-atari-mint
-	cp $(srcdir)/README $(DOCDIR)
+	cp $(srcdir)/README.md $(DOCDIR)
 	cp $(srcdir)/README.MiNT $(DOCDIR)
 	cp $(srcdir)/README-SDL.txt $(DOCDIR)
 

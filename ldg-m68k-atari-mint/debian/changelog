@@ -1,3 +1,9 @@
+ldg-m68k-atari-mint (2.35-SVN-20150827-1) unstable; urgency=medium
+
+  * Upgrade to the latest SVN version.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 15 Jan 2023 13:58:37 +0100
+
 ldg-m68k-atari-mint (2.32-ldg-SVN-20131104-5) unstable; urgency=medium
 
   * Upgrade to debhelper 10.

@@ -39,17 +39,13 @@ configure: configure-stamp
 configure-stamp: patch-stamp
 	dh_testdir
 
-	cd build && \
-		sed -i "s/^#CROSS = yes$$/CROSS = yes/g" CONFIGVARS && \
-		sed -i "s:^PREFIX=.*:PREFIX=$(D)/usr/m68k-atari-mint:g" CONFIGVARS
-
 	touch configure-stamp
 
 build: configure-stamp build-stamp
 build-stamp:
 	dh_testdir
 	cd build && \
-		$(MAKE) V=1
+		$(MAKE) CROSS=yes PREFIX=/usr/m68k-atari-mint V=1
 	touch build-stamp
 
 install: build
@@ -61,11 +57,9 @@ install: build
 	# Add here commands to install the package into debian/gemma-m68k-atari-mint
 	mkdir -p $(D)/usr/m68k-atari-mint
 	cd build && \
-		sed -i "s:^PREFIX=.*:PREFIX=$(D)/usr/m68k-atari-mint:g" CONFIGVARS && \
-		$(MAKE) install V=1
+		$(MAKE) install CROSS=yes PREFIX=$(D)/usr/m68k-atari-mint V=1
 
 	# Cleanup
-	rm -r $(D)/usr/mint
 	find  $(D)/usr/m68k-atari-mint/lib -name '*.a' -print -exec m68k-atari-mint-strip -S -x '{}' ';'
 
 clean:

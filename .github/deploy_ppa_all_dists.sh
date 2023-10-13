@@ -16,6 +16,7 @@ DISTS+=" focal"
 DISTS+=" jammy"
 DISTS+=" kinetic"
 DISTS+=" lunar"
+DISTS+=" mantic"
 
 # Use timestamp as package suffix to generate a unique version number
 SUFFIX=ppa$(date -u +%Y%m%d%H%M%S)

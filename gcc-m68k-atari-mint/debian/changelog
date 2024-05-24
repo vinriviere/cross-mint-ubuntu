@@ -1,3 +1,9 @@
+gcc-m68k-atari-mint (4.6.4-mint-20200504-6) unstable; urgency=medium
+
+  * Fix compilation on Ubuntu 24.04 Noble Numbat.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Fri, 24 May 2024 09:19:04 +0200
+
 gcc-m68k-atari-mint (4.6.4-mint-20200504-5) unstable; urgency=medium
 
   * Rebuild with mintlib-Git-20220821.

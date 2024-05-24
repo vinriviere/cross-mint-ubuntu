@@ -32,7 +32,8 @@ patch-stamp: unpack-stamp
 	dh_testdir
 
 	cd $(srcdir) && \
-		bzcat ../$(patch) | patch -p1
+		bzcat ../$(patch) | patch -p1 && \
+		cat ../texinfo.patch | patch -p1
 
 	touch patch-stamp
 

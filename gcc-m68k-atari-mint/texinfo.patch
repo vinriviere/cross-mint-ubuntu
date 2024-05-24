@@ -1,0 +1,11 @@
+--- old/gcc/doc/sourcebuild.texi	2024-05-24 09:01:38.747812009 +0200
++++ new/gcc/doc/sourcebuild.texi	2024-05-24 08:36:14.306032374 +0200
+@@ -676,7 +676,7 @@
+ @code{lang_checks}.
+ 
+ @table @code
+-@itemx all.cross
++@item all.cross
+ @itemx start.encap
+ @itemx rest.encap
+ FIXME: exactly what goes in each of these targets?

@@ -6,6 +6,11 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
+      # Install additional packages
+      - uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: devscripts debhelper dput python3-paramiko
+          version: 1.0
       # Install our GnuPG key pair
       - env:
           GPG_KEYS: ${{ secrets.GPG_KEYS }}
@@ -14,8 +19,6 @@ jobs:
       - env:
           SSH_ID: ${{ secrets.SSH_ID }}
         run: .github/install_ssh_id.sh
-      # Install additional packages
-      - run: sudo apt-get install -y devscripts debhelper dput python3-paramiko
       # Main script
       - env:
           COMMIT_BEFORE: ${{ github.event.before }}

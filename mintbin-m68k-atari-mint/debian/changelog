@@ -1,3 +1,9 @@
+mintbin-m68k-atari-mint (0.3-qGit-20230913-1) unstable; urgency=low
+
+  * Upgrade to version Git-20230913.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Wed, 27 Nov 2024 17:47:48 +0100
+
 mintbin-m68k-atari-mint (0.3-qCVS-20110527-3) unstable; urgency=low
 
   * Upgrade to debhelper 10.

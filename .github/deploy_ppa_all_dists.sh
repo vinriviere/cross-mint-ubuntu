@@ -12,7 +12,6 @@ PACKAGE=$1
 
 # List of all active Ubuntu distributions
 DISTS=
-DISTS+=" focal"
 DISTS+=" jammy"
 DISTS+=" noble"
 DISTS+=" oracular"

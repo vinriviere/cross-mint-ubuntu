@@ -14,7 +14,6 @@ PACKAGE=$1
 DISTS=
 DISTS+=" jammy"
 DISTS+=" noble"
-DISTS+=" oracular"
 DISTS+=" plucky"
 
 # Use timestamp as package suffix to generate a unique version number

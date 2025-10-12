@@ -1,3 +1,9 @@
+mintbin-m68k-atari-mint (0.3-qGit-20250709-1) unstable; urgency=medium
+
+  * Upgrade to version Git-20250709.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Sun, 12 Oct 2025 23:30:14 +0200
+
 mintbin-m68k-atari-mint (0.3-qGit-20230913-1) unstable; urgency=low
 
   * Upgrade to version Git-20230913.

@@ -10,10 +10,10 @@
 DEB_BUILD_GNU_TYPE      := $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 DEB_HOST_GNU_TYPE       := $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 
-tarball := $(wildcard gcc-*.tar.bz2)
-patch   := $(wildcard gcc-*.patch.bz2)
+tarball := $(wildcard gcc-*.tar.xz)
+patch   := $(wildcard gcc-*.patch.xz)
 
-srcdir  := $(shell echo $(tarball) | sed -e 's/\.tar\.bz2//')
+srcdir  := $(shell echo $(tarball) | sed -e 's/\.tar\.xz//')
 
 # FIXME: one-char vars are evil, even more than emacs.
 D := $(CURDIR)/debian/gcc-m68k-atari-mint
@@ -22,7 +22,7 @@ unpack: unpack-stamp
 unpack-stamp:
 	dh_testdir
 
-	tar jxf $(tarball)
+	tar xf $(tarball)
 	mkdir build
 
 	touch unpack-stamp
@@ -32,8 +32,7 @@ patch-stamp: unpack-stamp
 	dh_testdir
 
 	cd $(srcdir) && \
-		bzcat ../$(patch) | patch -p1 && \
-		cat ../texinfo.patch | patch -p1
+		xzcat ../$(patch) | patch -p1
 
 	touch patch-stamp
 

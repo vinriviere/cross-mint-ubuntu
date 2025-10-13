@@ -1,3 +1,10 @@
+gcc-m68k-atari-mint (4.6.4-mint-20251014-1) unstable; urgency=medium
+
+  * Upgrade to current Git version.
+  * Fix compilation on Ubuntu 25.10 Questing Quokka.
+
+ -- Vincent Riviere <vincent.riviere@freesbee.fr>  Tue, 14 Oct 2025 00:15:55 +0200
+
 gcc-m68k-atari-mint (4.6.4-mint-20200504-6) unstable; urgency=medium
 
   * Fix compilation on Ubuntu 24.04 Noble Numbat.

@@ -14,7 +14,6 @@ PACKAGE=$1
 DISTS=
 DISTS+=" jammy"
 DISTS+=" noble"
-DISTS+=" plucky"
 DISTS+=" questing"
 DISTS+=" resolute"
 
